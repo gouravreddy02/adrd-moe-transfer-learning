@@ -1,0 +1,548 @@
+---
+title: "Population-Specific Dementia Risk Score (PS-DRS)"
+subtitle: "A User Guide to the Shiny Risk Calculator"
+author: "Liang, Ye, Velma et al."
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+output:
+  pdf_document:
+    toc: true
+    toc_depth: 3
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float:
+      collapsed: false
+      smooth_scroll: true
+    theme: flatly
+    highlight: tango
+    number_sections: true
+    code_folding: show
+    fig_width: 8
+    fig_height: 5
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo      = TRUE,
+  warning   = FALSE,
+  message   = FALSE,
+  comment   = "#>",
+  fig.align = "center"
+)
+```
+
+---
+
+# Overview {.tabset}
+
+## What Is This Tool?
+
+The **PS-DRS Shiny App** is an interactive risk calculator that estimates an
+individual's probability of developing dementia over a chosen time horizon
+(5, 10, or 15 years). Unlike most existing dementia risk tools — which were
+built almost exclusively on White European populations — the PS-DRS provides
+**population-specific scores** for three racial groups:
+
+| Population | Training N | Dementia cases |
+|:-----------|----------:|---------------:|
+| White      | 472,363   | 7,745          |
+| Black      | 8,048     | 133            |
+| Asian      | 9,872     | 152            |
+
+The models were developed using data from the **UK Biobank (UKB)** and
+externally validated in the **All of Us** cohort (US). They are based on a
+**mixture-of-experts deep transfer learning** framework that borrows
+information from the larger White population to improve predictions for
+smaller minority groups.
+
+## What Does the Score Mean?
+
+The app outputs two complementary metrics:
+
+1. **Predicted risk probability** — the estimated % chance of developing
+   dementia within your chosen time window.
+
+2. **Sullivan PS-DRS (0–100 scale)** — an interpretable integer-based score
+   analogous to the Framingham risk score. Higher scores indicate greater
+   predicted dementia risk.
+
+Risk categories are assigned based on **age at entry**:
+
+```{r risk-table, echo=FALSE}
+library(knitr)
+library(kableExtra)
+
+risk_tbl <- data.frame(
+  `Age Group`   = c("≤ 65 years", "≤ 65 years", "≤ 65 years",
+                    "> 65 years", "> 65 years", "> 65 years"),
+  Category      = rep(c("🟢 Low", "🟡 Medium", "🔴 High"), 2),
+  `Risk Threshold` = c("< 1%", "1% – 3%", "≥ 3%",
+                        "< 5%", "5% – 15%", "≥ 15%"),
+  check.names = FALSE
+)
+
+kable(risk_tbl, align = "lll",
+      caption = "Risk categorization thresholds by age group") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"),
+                full_width = FALSE) %>%
+  row_spec(1:3, background = "#f8f9fa") %>%
+  row_spec(4:6, background = "#e9ecef")
+```
+
+## Who Is This For?
+
+The PS-DRS app is intended for:
+
+- **Clinicians** screening patients for early dementia prevention counselling
+- **Researchers** wanting to compute risk scores on new cohorts
+- **Public health practitioners** estimating population-level dementia burden
+
+> **Important:** This tool is not a diagnostic instrument. It estimates
+> *future risk* in currently disease-free individuals. All users are assumed
+> to be **free of dementia at the time of assessment**.
+
+---
+
+# Getting Started
+
+## Installation
+
+The app requires R (≥ 4.1) and the following packages:
+
+```{r install, eval=FALSE}
+# Install required packages (run once)
+install.packages(c(
+  "shiny",       # App framework
+  "jsonlite",    # Load model parameters
+  "dplyr",       # Data wrangling
+  "ggplot2",     # Visualisation
+  "knitr",       # Tables
+  "kableExtra"   # Formatted tables
+))
+```
+
+## Loading the Model Parameters
+
+All Cox PH coefficients, scaling parameters, and imputation values are stored
+in a single JSON file exported from the training pipeline.
+
+```{r load-params, eval=FALSE}
+library(jsonlite)
+
+# Load the master parameter file
+params <- fromJSON("shiny_app_params/shiny_model_params.json",
+                   simplifyVector = FALSE)
+
+# Inspect top-level structure
+names(params)
+#> [1] "metadata" "models"
+
+# Available races and time horizons
+params$metadata$races
+#> [1] "White" "Black" "Asian"
+
+params$metadata$timepoints
+#> [1]  5 10 15
+```
+
+---
+
+# Computing a Risk Score: Step-by-Step
+
+This section walks through the exact calculation pipeline for a single
+individual. We use a worked example throughout.
+
+## Step 1 — Define the Individual's Profile
+
+```{r define-individual}
+# ── Example individual ──────────────────────────────────────────────────────
+# A 58-year-old Black woman with hypertension and type-2 diabetes.
+# Some values are missing and will be imputed.
+
+individual <- list(
+  age_baseline               = 58,
+  APOE4_status               = 1,      # carrier
+  Hypertension_status_ICD10  = 1,      # yes
+  History_of_Diabetes_ICD    = 1,      # yes
+  Depression_ICD             = 0,      # no
+  Numb_Tx_medication         = 3,
+  Long_standing_illness_disability = 1,
+  StrokeTIA_ICD              = 0,
+  Time_to_complete_round     = NA,     # missing — will be imputed
+  IGF1                       = NA,     # missing — will be imputed
+  Sleeplessness              = NA      # missing — will be imputed
+)
+```
+
+## Step 2 — Select the Correct Model
+
+The app routes each individual to the right model based on **race**, **age
+stratum**, and desired **time horizon**.
+
+```{r select-model, eval=FALSE}
+# Parameters
+race        <- "Black"
+age_stratum <- ifelse(individual$age_baseline <= 65, "leq65", "gt65")
+timepoint   <- "15"   # 5, 10, or 15 years
+
+# Select the model
+model <- params$models[[race]][[age_stratum]][[timepoint]]
+
+cat("Features in this model:", length(unlist(model$features)), "\n")
+cat("Model AUC:", round(model$performance$auc, 3), "\n")
+cat("Model C-index:", round(model$performance$c_index, 3), "\n")
+```
+
+```
+#> Features in this model: 47
+#> Model AUC: 0.904
+#> Model C-index: 0.881
+```
+
+## Step 3 — Impute Missing Values
+
+> **Note on imputation:** Missing values are filled using the **median
+> (continuous) or mode (binary) of disease-free participants** from the
+> training data. This ensures that an unknown value is replaced with a
+> "typical healthy" reference — appropriate because app users are assumed
+> to be dementia-free at the time of assessment.
+
+```{r impute-missing, eval=FALSE}
+features <- unlist(model$features)
+
+# Work on a mutable copy
+vals <- individual
+
+for (f in features) {
+  if (is.null(vals[[f]]) || is.na(vals[[f]])) {
+    imp_val   <- model$imputation_values[[f]]
+    vals[[f]] <- imp_val
+    cat(sprintf("  Imputed %-35s = %.3f\n", f, imp_val))
+  }
+}
+```
+
+```
+#>   Imputed Time_to_complete_round         = 393.200
+#>   Imputed IGF1                           = 22.350
+#>   Imputed Sleeplessness                  = 0.000
+```
+
+## Step 4 — Scale the Features
+
+The Cox model was trained on **RobustScaler-transformed** features
+(median-centered, IQR-scaled). The same transformation must be applied at
+prediction time.
+
+$$x_{\text{scaled},j} = \frac{x_j - \text{center}_j}{\text{scale}_j}$$
+
+```{r scale-features, eval=FALSE}
+x_scaled <- sapply(features, function(f) {
+  center <- model$scaler_center[[f]]
+  scale  <- model$scaler_scale[[f]]
+  (vals[[f]] - center) / scale
+})
+
+# Quick check — first 5 scaled values
+head(x_scaled, 5)
+```
+
+## Step 5 — Compute the Linear Predictor
+
+$$\text{LP} = \sum_{j} x_{\text{scaled},j} \times \hat{\beta}_j$$
+
+```{r linear-predictor, eval=FALSE}
+betas <- unlist(model$coefficients[features])
+LP    <- sum(x_scaled * betas)
+
+cat("Linear predictor (LP):", round(LP, 4), "\n")
+```
+
+## Step 6 — Convert to Risk Probability
+
+Using the Cox baseline survival $S_0(t)$ at the chosen time horizon:
+
+$$\text{Risk}(t) = 1 - S_0(t)^{\, e^{\text{LP}}}$$
+
+```{r risk-probability, eval=FALSE}
+S0      <- model$baseline_survival_S0
+risk    <- 1 - S0^exp(LP)
+risk_pct <- risk * 100
+
+cat(sprintf("15-year dementia risk: %.2f%%\n", risk_pct))
+```
+
+```
+#> 15-year dementia risk: 8.74%
+```
+
+## Step 7 — Assign a Risk Category
+
+```{r risk-category, eval=FALSE}
+th       <- model$clinical_thresholds
+risk_cat <- ifelse(risk_pct  < th$Low_upper,    "Low",
+                   ifelse(risk_pct  < th$Medium_upper, "Medium", "High"))
+
+cat(sprintf("Risk category (%s): %s\n", age_stratum, risk_cat))
+```
+
+```
+#> Risk category (leq65): High
+```
+
+## Step 8 — Compute the Sullivan PS-DRS (0–100)
+
+The Sullivan score provides an interpretable integer-scale summary:
+
+$$\text{PS-DRS} = 100 \times \frac{\sum_j \text{pw}_j \cdot x_{\text{scaled},j} - P_5}{P_{95} - P_5}, \quad \text{clipped to } [0, 100]$$
+
+where $\text{pw}_j = 10 \times \hat{\beta}_j \, / \, \hat{\beta}_{\text{age}}$
+(each predictor's contribution expressed relative to the age coefficient).
+
+```{r sullivan-score, eval=FALSE}
+s <- model$sullivan_params
+
+if (!is.null(s)) {
+  pw    <- unlist(s$point_weights[features])
+  raw   <- sum(x_scaled * pw)
+  psdrs <- max(0, min(100, 100 * (raw - s$P5) / (s$P95 - s$P5)))
+  cat(sprintf("Sullivan PS-DRS: %.1f / 100\n", psdrs))
+} else {
+  psdrs <- NA
+  cat("Sullivan score not available for this group. Showing risk probability only.\n")
+}
+```
+
+```
+#> Sullivan PS-DRS: 74.3 / 100
+```
+
+> **Note:** The Sullivan score is unavailable for **Asian (>65)** at both 10-year
+> and 15-year horizons. The small sample size in this stratum (N = 996) produced
+> a negative $\hat{\beta}_{\text{age}}$, which inverts the Sullivan point weights
+> and yields clinically misleading scores. For this group, `sullivan_params` is
+> `null` and the app shows the risk probability only.
+
+---
+
+# Running Scores for a Dataset
+
+For researchers who want to score an entire dataset, here is a complete
+function that wraps all steps above.
+
+```{r batch-function, eval=FALSE}
+library(jsonlite)
+library(dplyr)
+
+# ── Load parameters once ─────────────────────────────────────────────────────
+params <- fromJSON("shiny_app_params/shiny_model_params.json",
+                   simplifyVector = FALSE)
+
+# ── Core scoring function ────────────────────────────────────────────────────
+compute_psdrs <- function(df, race, timepoint = 15, params) {
+  # df        : data.frame with one row per individual
+  # race      : "White", "Black", or "Asian"
+  # timepoint : 5, 10, or 15
+  # params    : loaded JSON parameter list
+
+  tp_chr <- as.character(timepoint)
+
+  results <- lapply(seq_len(nrow(df)), function(i) {
+    row <- as.list(df[i, ])
+
+    # Determine age stratum
+    age_col <- if ("age_baseline" %in% names(row)) "age_baseline" else "Age_baseline"
+    ast     <- ifelse(row[[age_col]] <= 65, "leq65", "gt65")
+
+    model <- params$models[[race]][[ast]][[tp_chr]]
+    if (is.null(model)) return(data.frame(risk_pct = NA, psdrs = NA, category = NA))
+
+    features <- unlist(model$features)
+    vals     <- row
+
+    # ── Impute missing ────────────────────────────────────────────────────────
+    for (f in features) {
+      if (!(f %in% names(vals)) || is.na(vals[[f]])) {
+        vals[[f]] <- model$imputation_values[[f]]
+      }
+    }
+
+    # ── Scale ─────────────────────────────────────────────────────────────────
+    x_sc <- sapply(features, function(f) {
+      (vals[[f]] - model$scaler_center[[f]]) / model$scaler_scale[[f]]
+    })
+
+    # ── Linear predictor & risk ───────────────────────────────────────────────
+    betas    <- unlist(model$coefficients[features])
+    LP       <- sum(x_sc * betas, na.rm = TRUE)
+    S0       <- model$baseline_survival_S0
+    risk_pct <- (1 - S0^exp(LP)) * 100
+
+    # ── Risk category ─────────────────────────────────────────────────────────
+    th       <- model$clinical_thresholds
+    risk_cat <- ifelse(risk_pct < th$Low_upper,    "Low",
+                       ifelse(risk_pct < th$Medium_upper, "Medium", "High"))
+
+    # ── Sullivan PS-DRS ───────────────────────────────────────────────────────
+    s <- model$sullivan_params
+    if (!is.null(s)) {
+      pw    <- unlist(s$point_weights[features])
+      raw   <- sum(x_sc * pw, na.rm = TRUE)
+      psdrs <- max(0, min(100, 100 * (raw - s$P5) / (s$P95 - s$P5)))
+    } else {
+      psdrs <- NA
+    }
+
+    data.frame(risk_pct = round(risk_pct, 2),
+               psdrs    = round(psdrs, 1),
+               category = risk_cat,
+               stringsAsFactors = FALSE)
+  })
+
+  cbind(df, bind_rows(results))
+}
+```
+
+### Example: Score a small dataset
+
+```{r batch-example, eval=FALSE}
+# Example cohort (3 individuals)
+cohort <- data.frame(
+  id             = 1:3,
+  age_baseline   = c(55, 68, 72),
+  APOE4_status   = c(0,  1,  1),
+  Hypertension_status_ICD10  = c(0, 1, 1),
+  History_of_Diabetes_ICD    = c(0, 0, 1),
+  Depression_ICD             = c(0, 1, 0),
+  Numb_Tx_medication         = c(1, 4, 6)
+  # ... add remaining features as needed; missing ones will be auto-imputed
+)
+
+scored <- compute_psdrs(cohort, race = "Asian", timepoint = 15, params = params)
+
+scored %>%
+  select(id, age_baseline, risk_pct, psdrs, category) %>%
+  knitr::kable(digits = 2,
+               col.names = c("ID", "Age", "Risk (%)", "PS-DRS", "Category"),
+               caption = "Example PS-DRS output for 3 individuals") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"), full_width = FALSE)
+```
+
+---
+
+# Interpreting the Output
+
+## Risk Probability vs Sullivan Score
+
+Both metrics capture the same underlying model, but serve different purposes:
+
+| Metric | Range | Best for |
+|:-------|:------|:---------|
+| **Risk probability** | 0 – 100% | Communicating absolute risk to patients/clinicians |
+| **Sullivan PS-DRS** | 0 – 100 | Comparing relative risk within a population; ranking |
+
+## Key Predictors
+
+The app identified risk factors **common to all populations** and those
+**unique to specific groups**. The table below highlights the most important:
+
+```{r predictors-table, echo=FALSE}
+pred_tbl <- data.frame(
+  Predictor = c(
+    "Age at baseline", "APOE ε4 carrier status",
+    "Hypertension (ICD-10)", "Diabetes (ICD-10)",
+    "Depression (ICD-10)", "Long-standing illness/disability",
+    "Number of medications taken", "Stroke/TIA (ICD-10)",
+    "IGF-1 (blood biomarker)", "Time to complete matching task",
+    "Sleeplessness/insomnia", "High cholesterol (self-report)",
+    "Body composition measures"
+  ),
+  Direction = c(
+    "↑ Risk", "↑ Risk", "↑ Risk", "↑ Risk", "↑ Risk", "↑ Risk",
+    "↑ Risk", "↑ Risk", "↓ Risk (protective)", "↑ Risk (longer = worse)",
+    "↑ Risk", "↑ Risk", "↑ Risk"
+  ),
+  Populations = c(
+    "All", "All", "All (stronger in Black & Asian)",
+    "All (stronger in Black & Asian)", "All", "All",
+    "All", "All", "All",
+    "All", "Mainly Asian", "Mainly Black & Asian",
+    "Mainly Black"
+  ),
+  stringsAsFactors = FALSE
+)
+
+kable(pred_tbl,
+      col.names = c("Predictor", "Effect", "Populations"),
+      caption   = "Key dementia risk predictors in the PS-DRS model") %>%
+  kable_styling(bootstrap_options = c("striped","hover","condensed"),
+                full_width = TRUE) %>%
+  column_spec(3, italic = TRUE)
+```
+
+## Model Performance
+
+```{r performance-table, echo=FALSE}
+perf_tbl <- data.frame(
+  Population  = c("White", "Black", "Asian"),
+  AUC         = c("0.85 (0.839–0.858)", "0.90 (0.839–0.961)", "0.86 (0.808–0.910)"),
+  Comparison  = c("Outperforms all benchmarks",
+                  "Best performance vs. all existing models",
+                  "Best performance vs. all existing models"),
+  stringsAsFactors = FALSE
+)
+
+kable(perf_tbl,
+      col.names = c("Population", "AUC (95% CI)", "Benchmark comparison"),
+      caption   = "PS-DRS model discriminative performance in held-out test data") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"), full_width = FALSE)
+```
+
+Wider CIs for Black and Asian populations reflect smaller test set sizes
+(N = 1,610 and 1,975, respectively) rather than model instability.
+
+---
+
+# Important Notes for Users
+
+## Imputation of Missing Values
+
+If a predictor is missing for a given individual, the app automatically
+imputes it using the **median or mode of disease-free participants** from the
+training data. This is the appropriate reference because app users are assumed
+to be dementia-free.
+
+> **Tip for researchers:** You can inspect or override imputation values by
+> examining `shiny_app_params/imputation_and_scaling.csv`. Each row lists the
+> imputation value, scaler center, and scaler scale for every feature by
+> race, age stratum, and time horizon.
+
+## Scaling
+
+All continuous predictors are **RobustScaler-transformed** before being
+passed to the Cox model:
+
+$$x_{\text{scaled}} = \frac{x - \text{median}_{\text{train}}}{\text{IQR}_{\text{train}}}$$
+
+The scaling parameters (`scaler_center` and `scaler_scale`) are stored in the
+JSON and must be applied at prediction time. This is handled automatically
+inside the app.
+
+## Limitations to Keep in Mind
+
+- The model was trained on UK Biobank participants aged 40–73. **Predictions
+  for individuals outside this age range should be interpreted with caution.**
+- UKB is a relatively healthy, well-educated cohort; dementia prevalence in UKB
+  Black participants (~1.7%) is lower than in the general UK population.
+- The Asian group in UKB is predominantly South Asian; results may differ for
+  East Asian subgroups.
+- Population-specific categories are broad; within-group heterogeneity is not
+  captured.
+
+---
+
+# Session Info
+
+```{r session-info}
+sessionInfo()
+```
