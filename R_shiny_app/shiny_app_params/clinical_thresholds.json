@@ -1,0 +1,21 @@
+{
+  "description": "Risk categorization thresholds (applied to predicted risk %)",
+  "thresholds": {
+    "leq65": {
+      "label": "\u226465",
+      "Low": "< 1.0%",
+      "Medium": "1.0% \u2013 3.0%",
+      "High": "\u2265 3.0%",
+      "Low_upper_pct": 1.0,
+      "Medium_upper_pct": 3.0
+    },
+    "gt65": {
+      "label": ">65",
+      "Low": "< 5.0%",
+      "Medium": "5.0% \u2013 15.0%",
+      "High": "\u2265 15.0%",
+      "Low_upper_pct": 5.0,
+      "Medium_upper_pct": 15.0
+    }
+  }
+}

@@ -1,0 +1,868 @@
+race,feature,feature_description,category,min,max,mean,is_binary
+Asian,Unnamed: 0_x,Unnamed: 0_x,Other,39,490162,243946.124594485,NA
+Asian,AF_p20002_i0,History of Atrial Fibrillation determined by self report non-cancer codes,Medical condition,0,1,0.00141930251419302,NA
+Asian,AF_ICD10,History of Atrial Fibrillation determined by ICD10 codes,Medical condition,0,1,0.00841443633414436,NA
+Asian,Age_p21003_i0,Age at baseline,Socio-demographics,40,72,53.32816301703163,FALSE
+Asian,Depression_p20002_i0,Depression determined by self-reported non-cancer illness codes,Medical condition,0,1,0.03923357664233577,NA
+Asian,Depression_ICD,Depression determined by ICD codes,Medical condition,0,1,0.04866180048661801,TRUE
+Asian,Hchol_p20002_i0,High cholesterol determined by self-reported non-cancer illness codes,Medical condition,0,1,0.2846715328467153,TRUE
+Asian,Hchol_ICD10,High cholesterol determined by ICD codes,Medical condition,0,1,0.04531630170316302,NA
+Asian,Hchol_med,High cholesterol determined by self reported use of statins,Medical condition,0,1,0.2482765612327656,NA
+Asian,History_of_Diabetes_ICD,History of Diabetes determined by ICD codes,Medical condition,0,1,0.23976074614760745,TRUE
+Asian,Hypertension_status_p20002_i0,Hypertension status determined by self-reported non-cancer illness codes,Medical condition,0,1,0.2846715328467153,TRUE
+Asian,Hypertension_status_ICD10,Hypertension status determined by ICD codes,Medical condition,0,1,0.3729724249797242,TRUE
+Asian,Hypertension_status_med,Hypertension status determined by self reported use of antihypertensive medication,Medical condition,0,1,0.01611922141119221,NA
+Asian,Medications_ATC_Antihypertensive,Self-reported anti-hypertensive medications based on the ATC codes reported in Supplementary Data 1 of Wu et al. (2019),Medication history,0,1,0.01611922141119221,NA
+Asian,Medications_ATC_Statins,Self-reported statin-usemedications based on the ATC codes reported in Supplementary Data 1 of Wu et al. (2019),Medication history,0,1,0.2482765612327656,NA
+Asian,Medications_ATC_Aspirin,Self-reported aspirin-use medications based on the ATC codes reported in Supplementary Data 1 of Wu et al. (2019),Medication history,0,1,0.18045417680454176,NA
+Asian,Medications_ATC_NSAIDs_excluding_Aspirin,Self-reported NSAIDs excluding aspirin medications based on the ATC codes reported in Supplementary Data 1 of Wu et al. (2019),Medication history,0,1,0.03984184914841849,NA
+Asian,Medications_ATC_Hormone_replacement_therapy,Self-reported horone replacement therapy medications based on the ATC codes reported in Supplementary Data 1 of Wu et al. (2019),Medication history,0,1,0.0227088402270884,NA
+Asian,StrokeTIA_p20002_i0,History of stroke and/or atransient ischemic stroke (TIA) determined by self-reported non-cancer illness codes,Medical condition,0,1,0.0154095701540957,NA
+Asian,StrokeTIA_ICD,History of stroke and/or a transient ischemic stroke (TIA) determined by ICD codes,Medical condition,0,1,0.02879156528791565,TRUE
+Asian,TBI_ICD10,History of traumatic brain injury (TBI) determined by ICD codes,Medical condition,0,1,0.00770478507704785,NA
+Asian,31-0.0,Sex,Socio-demographics,0,1,0.5359894566098946,TRUE
+Asian,X2306.0.0,Weight change compared with 1 year ago,Other health,1,3,2.1548053527980535,NA
+Asian,X1628.0.0,Alcohol intake versus 10 years previously,Alcohol,1,3,1.656528791565288,NA
+Asian,X2267.0.0,Use of sun/uv protection,Sun Exposoure,1,4,1.772810218978102,NA
+Asian,X1687.0.0,Comparative body size at age 10,Early life factors,1,3,1.687956204379562,NA
+Asian,X1697.0.0,Comparative height size at age 10,Early life factors,1,3,1.9869221411192215,NA
+Asian,Household_occupancy_p709_i0,Household occupancy,Socio-demographics,1,45,3.5614355231143553,NA
+Asian,X23101.0.0,Whole body fat-free mass,Body composition by impedance,25.8,96.3,50.03596918085969,NA
+Asian,X23114.0.0,Leg predicted mass (right),Body composition by impedance,4,20.4,8.098246147607462,NA
+Asian,X23118.0.0,Leg predicted mass (left),Body composition by impedance,3.9,20,8.018400243309003,NA
+Asian,X23130.0.0,Trunk predicted mass,Body composition by impedance,12.1,49.5,26.52323600973236,NA
+Asian,X404,Duration to first press of snap-button in each round (averaged from 4 repeats),Reaction time,97.75,2023.75,613.1535634630982,NA
+Asian,X403,Number of times snap-button pressed (averaged from 12 repeats),Reaction time,0,24.4166666666667,0.5480535279805352,NA
+Asian,X400,Time to complete round (averaged from 2 repeats),Pairs matching,61,6481,267.1191200324412,FALSE
+Asian,X399,Number of incorrect matches in round (averaged from 2 repeats),Pairs matching,0,97,2.775141930251419,NA
+Asian,X398,Number of correct matches in round (averaged from 2 repeats),Pairs matching,0,4.5,3.65779602595296,FALSE
+Asian,X3064,"Peak expiratory flow (PEF, maximum values from 2 measurments)",Spirometry,11,1237,355.3812854825629,NA
+Asian,X4080,"Systolic blood pressure, automated reading  (averaged from 2 repeats)",Blood pressure,65,241,134.9557481751825,NA
+Asian,X4079,"Diastolic blood pressure, automated reading  (averaged from 2 repeats)",Blood pressure,42.5,130.5,82.46867396593674,NA
+Asian,X102,"Pulse rate, automated reading  (averaged from 2 repeats)",Blood pressure,37,126,71.15176399026764,NA
+Asian,X20023.0.0,Mean time to correctly identify matches,Reaction time,78,1889,617.1997161394971,NA
+Asian,X23099.0.0,Body fat percentage,Body composition by impedance,5,64.3,31.56830900243309,NA
+Asian,X23100.0.0,Whole body fat mass,Body composition by impedance,5,89.5,23.347090429845903,NA
+Asian,X23102.0.0,Whole body water mass,Body composition by impedance,18.9,78.6,36.557917680454175,NA
+Asian,X23105.0.0,Basal metabolic rate,Body composition by impedance,3364,13761,6229.872566909976,NA
+Asian,X23106.0.0,Impedance of whole body,Body composition by impedance,72,993,629.9589416058394,NA
+Asian,X23107.0.0,Impedance of leg (right),Body composition by impedance,100,890,259.77544606650446,NA
+Asian,X23108.0.0,Impedance of leg (left),Body composition by impedance,100,731,260.87540551500405,NA
+Asian,X23109.0.0,Impedance of arm (right),Body composition by impedance,107,775,342.0902270884023,NA
+Asian,X23110.0.0,Impedance of arm (left),Body composition by impedance,201,816,347.31133414436334,NA
+Asian,X23111.0.0,Leg fat percentage (right),Body composition by impedance,1.4,63.9,31.37691605839416,NA
+Asian,X23112.0.0,Leg fat mass (right),Body composition by impedance,0.3,19.4,3.975831305758313,NA
+Asian,X23113.0.0,Leg fat-free mass (right),Body composition by impedance,4,23.8,8.54742497972425,NA
+Asian,X23115.0.0,Leg fat percentage (left),Body composition by impedance,4.2,65,31.18404298459043,NA
+Asian,X23116.0.0,Leg fat mass (left),Body composition by impedance,0.4,19.9,3.9057177615571774,NA
+Asian,X23117.0.0,Leg fat-free mass (left),Body composition by impedance,4.1,23.3,8.464243714517439,NA
+Asian,X23119.0.0,Arm fat percentage (right),Body composition by impedance,5.8,70.2,29.996076642335765,NA
+Asian,X23120.0.0,Arm fat mass (right),Body composition by impedance,0.1,12.6,1.1639497161394974,NA
+Asian,X23121.0.0,Arm fat-free mass (right),Body composition by impedance,1.2,6.8,2.6870032441200324,NA
+Asian,X23122.0.0,Arm predicted mass (right),Body composition by impedance,1.1,7,2.517457420924574,NA
+Asian,X23123.0.0,Arm fat percentage (left),Body composition by impedance,6.1,74,30.78806772100568,NA
+Asian,X23124.0.0,Arm fat mass (left),Body composition by impedance,0.1,14.5,1.234083536090835,NA
+Asian,X23125.0.0,Arm fat-free mass (left),Body composition by impedance,1.2,7.3,2.7068126520681264,NA
+Asian,X23126.0.0,Arm predicted mass (left),Body composition by impedance,1.1,6.4,2.535938767234388,NA
+Asian,X23127.0.0,Trunk fat percentage,Body composition by impedance,3,69,31.7713098134631,NA
+Asian,X23128.0.0,Trunk fat mass,Body composition by impedance,0.5,43.6,13.090723844282238,NA
+Asian,X23129.0.0,Trunk fat-free mass,Body composition by impedance,10.4,56.5,27.56956609894566,NA
+Asian,X48.0.0,Waist circumference,Body size measures,56,165,91.44620437956203,FALSE
+Asian,X49.0.0,Hip circumference,Body size measures,73,170,101.16728507704784,NA
+Asian,X50.0.0,Standing height,Body size measures,128,194,164.01497364152473,NA
+Asian,X51.0.0,Seated height,Body size measures,101,154,131.7097931873479,NA
+Asian,X3077.0.0,Seating box height,Body size measures,30,50,46.13442822384428,FALSE
+Asian,X20015.0.0,Sitting height,Body size measures,56,118,85.57536496350365,FALSE
+Asian,X21001.0.0,Body mass index (BMI),Body size measures,14.8744,68.3194,27.183135421735606,NA
+Asian,X21002.0.0,Weight,Body size measures,30.1,173.4,73.28862530413625,NA
+Asian,X46.0.0,Hand grip strength (left),Hand grip strength,0,70,25.842153284671532,NA
+Asian,X47.0.0,Hand grip strength (right),Hand grip strength,0,70,27.63270478507705,FALSE
+Asian,X20150.0.0,"Forced expiratory volume in 1-second (FEV1), Best measure",Spirometry,0.21,6.93,2.497483779399838,NA
+Asian,X20151.0.0,"Forced vital capacity (FVC), Best measure",Spirometry,0.33,7.45,3.327342862935929,NA
+Asian,X30600.0.0,Albumin,Blood biochemistry,20.65,56.28,44.86080798864558,NA
+Asian,X30610.0.0,Alkaline phosphatase,Blood biochemistry,30.3,427,88.38044403892944,NA
+Asian,X30620.0.0,Alanine aminotransferase,Blood biochemistry,4.2,302.17,24.47450628548256,FALSE
+Asian,X30630.0.0,Apolipoprotein A,Blood biochemistry,0.687,2.492,1.414162206001622,NA
+Asian,X30640.0.0,Apolipoprotein B,Blood biochemistry,0.402,2,1.0031633211678832,NA
+Asian,X30650.0.0,Aspartate aminotransferase,Blood biochemistry,10.1,338.3,26.422769667477695,FALSE
+Asian,X30660.0.0,Direct bilirubin,Blood biochemistry,1,27.46,1.7175435928629357,NA
+Asian,X30670.0.0,Urea,Blood biochemistry,1.17,30.12,5.002301297648013,NA
+Asian,X30680.0.0,Calcium,Blood biochemistry,1.84,2.986,2.374511151662611,FALSE
+Asian,X30690.0.0,Cholesterol,Blood biochemistry,2.04,10.611,5.339307278994323,NA
+Asian,X30700.0.0,Creatinine,Blood biochemistry,14.3,1068.9,71.61028994322788,NA
+Asian,X30710.0.0,C-reactive protein,Blood biochemistry,0.08,63.11,2.8090622465531228,NA
+Asian,X30720.0.0,Cystatin C,Blood biochemistry,0.4,6.923,0.9506349351175992,NA
+Asian,X30730.0.0,Gamma glutamyltransferase,Blood biochemistry,6.4,1016.5,36.90503852392539,NA
+Asian,X30740.0.0,Glucose,Blood biochemistry,2.124,34.478,5.408346411192214,NA
+Asian,X30750.0.0,Glycated haemoglobin (HbA1c),Blood biochemistry,16.1,132.2,40.48179237631792,NA
+Asian,X30760.0.0,HDL cholesterol,Blood biochemistry,0.356,4.129,1.2730139902676398,NA
+Asian,X30770.0.0,Insulin-like Growth Factor 1 (IGF-1),Blood biochemistry,2.937,92.686,20.569896999188973,FALSE
+Asian,X30780.0.0,LDL direct,Blood biochemistry,0.97,7.303,3.363348236009732,NA
+Asian,X30790.0.0,Lipoprotein A,Blood biochemistry,3.8,189,46.81940389294404,NA
+Asian,X30810.0.0,Phosphate,Blood biochemistry,0.508,2.078,1.1901675790754258,NA
+Asian,X30830.0.0,Sex hormone-binding globulin (SHBG),Blood biochemistry,0.85,233.3,41.66658049472831,FALSE
+Asian,X30840.0.0,Total bilirubin,Blood biochemistry,1.66,64.08,8.873336374695864,NA
+Asian,X30850.0.0,Testosterone,Blood biochemistry,0.35,32.13,6.619870336577454,NA
+Asian,X30860.0.0,Total protein,Blood biochemistry,42.78,99.02,74.8204389699919,NA
+Asian,X30870.0.0,Triglycerides,Blood biochemistry,0.257,11.266,1.9522255677210056,FALSE
+Asian,X30880.0.0,Urate,Blood biochemistry,94,732.8,317.0574817518248,FALSE
+Asian,X30890.0.0,Vitamin D,Blood biochemistry,10,297,29.254004460665044,FALSE
+Asian,X30000.0.0,White blood cell (leukocyte) count,Blood count,1.59,24.1,7.316321978913219,NA
+Asian,X30010.0.0,Red blood cell (erythrocyte) count,Blood count,2.239,7.84,4.712290247364153,NA
+Asian,X30020.0.0,Haemoglobin concentration,Blood count,6.93,19.46,13.948930454176804,NA
+Asian,X30030.0.0,Haematocrit percentage,Blood count,22.24,60.2,40.81487935928629,NA
+Asian,X30040.0.0,Mean corpuscular volume,Blood count,53.17,128.8,86.91893856447687,NA
+Asian,X30050.0.0,Mean corpuscular haemoglobin,Blood count,16.12,63.23,29.73090531224655,NA
+Asian,X30060.0.0,Mean corpuscular haemoglobin concentration,Blood count,26.67,63.66,34.17578568532035,NA
+Asian,X30070.0.0,Red blood cell (erythrocyte) distribution width,Blood count,10.78,28.39,13.76233171127332,NA
+Asian,X30080.0.0,Platelet count,Blood count,13,963.2,256.7176094890511,NA
+Asian,X30090.0.0,Plateletcrit,Blood count,0.014,0.88,0.23713473236009736,FALSE
+Asian,X30100.0.0,Mean platelet (thrombocyte) volume,Blood count,6.01,15.2,9.384896593673966,NA
+Asian,X30110.0.0,Platelet distribution width,Blood count,13.6,19.6,16.5099797242498,NA
+Asian,X30120.0.0,Lymphocyte count,Blood count,0.03,17.62,2.267698702351987,NA
+Asian,X30130.0.0,Monocyte count,Blood count,0,5.66,0.474014598540146,NA
+Asian,X30140.0.0,Neutrophill count,Blood count,0.1,14.79,4.303682076236821,NA
+Asian,X30150.0.0,Eosinophill count,Blood count,0,3.59,0.2292234387672344,NA
+Asian,X30160.0.0,Basophill count,Blood count,0,1.2,0.0381447688564477,NA
+Asian,X30170.0.0,Nucleated red blood cell count,Blood count,0,1,0.00248073803730738,NA
+Asian,X30180.0.0,Lymphocyte percentage,Blood count,0.51,87,31.27365875912409,NA
+Asian,X30190.0.0,Monocyte percentage,Blood count,0.07,76.7,6.593281630170317,NA
+Asian,X30200.0.0,Neutrophill percentage,Blood count,1.12,94.8,58.43193532035685,NA
+Asian,X30210.0.0,Eosinophill percentage,Blood count,0,25.74,3.1348864557988647,NA
+Asian,X30220.0.0,Basophill percentage,Blood count,0,14.03,0.5663767234387673,NA
+Asian,X30230.0.0,Nucleated red blood cell percentage,Blood count,0,15.2,0.03887165450121654,NA
+Asian,X30240.0.0,Reticulocyte percentage,Blood count,0.034,41.826,1.3595932684509329,NA
+Asian,X30250.0.0,Reticulocyte count,Blood count,0.002,1.932,0.06388503649635037,NA
+Asian,X30260.0.0,Mean reticulocyte volume,Blood count,53.34,173.6,105.03673560421734,NA
+Asian,X30270.0.0,Mean sphered cell volume,Blood count,49.88,128.83,80.90098134630982,NA
+Asian,X30280.0.0,Immature reticulocyte fraction,Blood count,0,0.61,0.29709438361719387,FALSE
+Asian,X30290.0.0,High light scatter reticulocyte percentage,Blood count,0,6.336,0.41299300486618,NA
+Asian,X30300.0.0,High light scatter reticulocyte count,Blood count,0,0.293,0.01934458637469586,NA
+Asian,X30510.0.0,Creatinine (enzymatic) in urine,Urine biochemistry,384,50563,8863.780109489051,FALSE
+Asian,X30520.0.0,Potassium in urine,Urine biochemistry,3.2,199.9,55.32760746147608,FALSE
+Asian,X30530.0.0,Sodium in urine,Urine biochemistry,10.2,343.9,89.58603000811031,NA
+Asian,X1807.0.0,Father's age at death,Family history,1,115,68.34610705596107,NA
+Asian,X1873.0.0,Number of full brothers,Family history,0,14,2.391220600162206,NA
+Asian,X1883.0.0,Number of full sisters,Family history,0,10,2.1915044606650445,NA
+Asian,X87.0.0,Non-cancer illness year/age first occurred,Medical condition,0,2010,827.4639091646391,FALSE
+Asian,X92.0.0,Operation year/age first occurred,Operation,0,2010,1474.2303325223031,FALSE
+Asian,X134.0.0,Number of self-reported cancers,Medical condition,0,3,0.03152879156528791,NA
+Asian,X135.0.0,Number of self-reported non-cancer illnesses,Medical condition,0,20,1.8870640713706408,NA
+Asian,X136.0.0,"Number of operations, self-reported",Operation,0,14,1.0793795620437956,NA
+Asian,X137.0.0,Number of treatments/medications taken,Medication history,0,26,2.6528791565287917,FALSE
+Asian,X2050.0.0,Frequency of depressed mood in last 2 weeks,Mental health,1,4,1.5593065693430657,NA
+Asian,X2060.0.0,Frequency of unenthusiasm / disinterest in last 2 weeks,Mental health,1,4,1.7187753446877534,NA
+Asian,X2070.0.0,Frequency of tenseness / restlessness in last 2 weeks,Mental health,1,4,1.5869829683698298,NA
+Asian,X2080.0.0,Frequency of tiredness / lethargy in last 2 weeks,Mental health,1,4,2.0120640713706406,FALSE
+Asian,X2217.0.0,Age started wearing glasses or contact lenses,Other health,1,68,33.01226682887267,NA
+Asian,X2296.0.0,Falls in the last year,Other health,1,3,1.2713909164639092,FALSE
+Asian,X20008.0.0,Interpolated Year when non-cancer illness first diagnosed,Medical condition,1940.2,2010.7,1997.9200527169503,NA
+Asian,X20009.0.0,Interpolated Age of participant when non-cancer illness first diagnosed,Medical condition,0,70,42.72537510137875,NA
+Asian,X20010.0.0,Interpolated Year when operation took place,Operation,1940.5,2010.5,1991.012865977291,NA
+Asian,X20011.0.0,Interpolated Age of participant when operation took place,Operation,0,72,35.81859286293593,NA
+Asian,X20127.0.0,Neuroticism score,Mental health,0,12,4.6643349553933495,NA
+Asian,X6138.0.0,Education,Socio-demographics,1,6,2.4569140308191404,NA
+Asian,X864.0.0,Number of days/week walked 10+ minutes,Physical activity,0,7,5.152473641524736,NA
+Asian,X874.0.0,Duration of walks,Physical activity,0,800,52.13757096512571,NA
+Asian,X884.0.0,Number of days/week of moderate physical activity 10+ minutes,Physical activity,0,7,3.497262773722628,NA
+Asian,X894.0.0,Duration of moderate activity,Physical activity,0,950,49.90551500405515,NA
+Asian,X904.0.0,Number of days/week of vigorous physical activity 10+ minutes,Physical activity,0,7,1.9615774533657744,NA
+Asian,X924.0.0,Usual walking pace,Physical activity,1,3,1.9998986212489864,NA
+Asian,X943.0.0,Frequency of stair climbing in last 4 weeks,Physical activity,0,5,2.0895174371451746,NA
+Asian,X1031.0.0,Frequency of friend/family visits,Social Support,1,7,3.146086780210868,NA
+Asian,X1050.0.0,Time spend outdoors in summer,Sun Exposoure,0,20,3.442112733171127,NA
+Asian,X1060.0.0,Time spent outdoors in winter,Sun Exposoure,0,20,2.209651257096513,NA
+Asian,X1070.0.0,Time spent watching television (TV),Physical activity,0,24,2.6769059205190593,FALSE
+Asian,X1080.0.0,Time spent using computer,Physical activity,0,22,1.3202554744525548,NA
+Asian,X1100.0.0,Drive faster than motorway speed limit,Physical activity,1,4,1.4539740470397404,FALSE
+Asian,X1110.0.0,Length of mobile phone use,Electronic device use,0,4,2.6124290348742902,FALSE
+Asian,X1120.0.0,Weekly usage of mobile phone in last 3 months,Electronic device use,0,5,1.669910786699108,NA
+Asian,X1130.0.0,Hands-free device/speakerphone use with mobile phone in last 3 month,Electronic device use,0,4,0.4581305758313058,NA
+Asian,X1160.0.0,Sleep duration,Sleep,1,20,7.0522100567721004,NA
+Asian,X1170.0.0,Getting up in morning,Sleep,1,4,2.9385644768856447,NA
+Asian,X1180.0.0,Morning/evening person (chronotype),Sleep,1,4,2.0263584752635846,NA
+Asian,X1190.0.0,Nap during day,Sleep,1,3,1.5874898621248987,NA
+Asian,X1200.0.0,Sleeplessness / insomnia,Sleep,1,3,1.943633414436334,FALSE
+Asian,X1220.0.0,Daytime dozing / sleeping,Sleep,0,3,0.45012165450121655,NA
+Asian,X1269.0.0,Exposure to tobacco smoke at home,Smoking,0,100,0.4500202757502027,NA
+Asian,X1279.0.0,Exposure to tobacco smoke outside home,Smoking,0,100,0.823499594484996,NA
+Asian,X1289.0.0,Cooked vegetable intake,Diet,0,50,3.5859691808596916,NA
+Asian,X1299.0.0,Salad / raw vegetable intake,Diet,0,50,3.0063868613138687,NA
+Asian,X1309.0.0,Fresh fruit intake,Diet,0,50,2.608272506082725,NA
+Asian,X1319.0.0,Dried fruit intake,Diet,0,100,1.5565693430656935,NA
+Asian,X1329.0.0,Oily fish intake,Diet,0,5,1.2854825628548256,NA
+Asian,X1339.0.0,Non-oily fish intake,Diet,0,5,1.3279602595296025,NA
+Asian,X1349.0.0,Processed meat intake,Diet,0,5,1.285381184103812,NA
+Asian,X1359.0.0,Poultry intake,Diet,0,5,1.9311638280616383,NA
+Asian,X1369.0.0,Beef intake,Diet,0,5,0.5809002433090025,NA
+Asian,X1379.0.0,Lamb/mutton intake,Diet,0,5,1.2190794809407948,NA
+Asian,X1389.0.0,Pork intake,Diet,0,5,0.4840835360908354,NA
+Asian,X1408.0.0,Cheese intake,Diet,0,5,1.960462287104623,NA
+Asian,X1438.0.0,Bread intake,Diet,0,96,9.398925385239254,NA
+Asian,X1458.0.0,Cereal intake,Diet,0,33,3.41595701540957,NA
+Asian,X1478.0.0,Salt added to food,Diet,1,4,2.0227088402270885,NA
+Asian,X1488.0.0,Tea intake,Diet,0,35,2.903183292781833,NA
+Asian,X1518.0.0,Hot drink temperature,Diet,1,3,2.0958029197080292,NA
+Asian,X1528.0.0,Water intake,Diet,0,30,4.554034874290349,FALSE
+Asian,X1548.0.0,Variation in diet,Diet,1,3,1.8142741281427412,NA
+Asian,X1558.0.0,Alcohol intake frequency,Alcohol,1,6,4.585867802108678,NA
+Asian,X1727.0.0,Ease of skin tanning,Sun Exposoure,1,4,2.137469586374696,NA
+Asian,X1737.0.0,Childhood sunburn occasions,Sun Exposoure,0,200,0.3968978102189781,NA
+Asian,X2110.0.0,Able to confide,Social Support,0,5,3.126317923763179,NA
+Asian,X2139.0.0,Age first had sexual intercourse,Sexual factors,3,58,20.902473641524736,NA
+Asian,X2149.0.0,Lifetime number of sexual partners,Sexual factors,1,1000,5.727696674776967,NA
+Asian,X2277.0.0,Frequency of solarium/sunlamp use,Sun Exposoure,0,90,0.11486212489862124,NA
+Asian,X22033.0.0,Summed days activity,Physical activity,0,21,10.167072181670722,FALSE
+Asian,X22034.0.0,Summed minutes activity,Physical activity,0,540,102.87145174371452,NA
+Asian,X22037.0.0,MET minutes per week for walking,Physical activity,0,4158,827.1166970802919,NA
+Asian,X22038.0.0,MET minutes per week for moderate activity,Physical activity,0,5040,748.4902676399026,NA
+Asian,X22039.0.0,MET minutes per week for vigorous activity,Physical activity,0,10080,625.1305758313058,FALSE
+Asian,X6142.0.0,Current employment status,Socio-demographics,0,1,0.6228710462287105,TRUE
+Asian,X1140.0.0,Difference in mobile phone use compared to two years previously,Electronic device use,0,1,0.48763179237631793,NA
+Asian,X6144.0.0,"Never eat eggs, dairy, wheat, sugar",Diet,0,1,0.10685320356853203,NA
+Asian,X6162.0.0,Types of transport used (excluding work),Physical activity,0,1,0.7137064071370641,NA
+Asian,X1210.0.0,Snoring,Sleep,0,1,0.5940794809407948,NA
+Asian,X1468.0.0,Cereal type,Diet,0,1,0.2444241686942417,TRUE
+Asian,X6164,Types of physical activity in last 4 weeks,Physical activity,0,1,0.5909367396593674,NA
+Asian,X3059,Blow result ranking,Spirometry,0,1,0.7566909975669099,NA
+Asian,X2247.0.0,Hearing difficulty/problems,Other health,0,1,0.19718167072181672,TRUE
+Asian,X1150.0.0,Usual side of head for mobile phone use,Electronic device use,0,1,0.5362935928629359,TRUE
+Asian,X1249.0.0,Past tobacco smoking,Smoking,0,1,0.7000202757502028,NA
+Asian,X1418.0.0,Milk type used,Diet,0,1,0.621654501216545,NA
+Asian,X1428.0.0,Spread type,Diet,0,1,0.3100162206001622,NA
+Asian,X1448.0.0,Bread type,Diet,0,1,0.3961881589618816,NA
+Asian,X1508.0.0,Coffee type,Diet,0,1,0.601581508515815,NA
+Asian,X1717.0.0,Skin colour,Sun Exposoure,0,1,0.17731143552311435,NA
+Asian,X1747.0.0,"Hair colour (natural, before greying)",Sun Exposoure,0,1,0.2873073803730738,NA
+Asian,X1757.0.0,Facial ageing,Sun Exposoure,0,1,0.7339821573398215,TRUE
+Asian,X1647.0.0,Country of birth (UK/elsewhere),Early life factors,0,1,0.10492700729927008,NA
+Asian,X1707.0.0,Handedness (chirality/laterality),Early life factors,0,1,0.9139294403892944,NA
+Asian,APOE4status,APOE4 status,Medical condition,0,1,0.2043795620437956,TRUE
+Asian,History_of_Diabetes_p2443_i0,History of Diabetes diagnosed by doctor,Medical condition,0,1,0.17264801297648014,NA
+Asian,Physical_Activity_p22032_i0,IPAQ activity group,Physical activity,0,1,0.7525344687753447,NA
+Asian,X1797.0.0,Father still alive,Family history,0,1,0.2613544201135442,NA
+Asian,X1835.0.0,Mother still alive,Family history,0,1,0.488544201135442,TRUE
+Asian,X1920.0.0,Mood swings,Mental health,0,1,0.5115571776155717,NA
+Asian,X1930.0.0,Miserableness,Mental health,0,1,0.4011557177615572,NA
+Asian,X1940.0.0,Irritability,Mental health,0,1,0.25557583130575834,NA
+Asian,X1950.0.0,Sensitivity / hurt feelings,Mental health,0,1,0.5962084347120844,NA
+Asian,X1960.0.0,Fed-up feelings,Mental health,0,1,0.3919302514193025,NA
+Asian,X1970.0.0,Nervous feelings,Mental health,0,1,0.2543592862935929,NA
+Asian,X1980.0.0,Worrier / anxious feelings,Mental health,0,1,0.5455190592051906,NA
+Asian,X1990.0.0,Tense / 'highly strung',Mental health,0,1,0.2605433901054339,NA
+Asian,X2000.0.0,Worry too long after embarrassment,Mental health,0,1,0.4996958637469586,TRUE
+Asian,X2010.0.0,Suffer from 'nerves',Mental health,0,1,0.22455393349553937,NA
+Asian,X2020.0.0,"Loneliness, isolation",Mental health,0,1,0.2702757502027575,NA
+Asian,X2030.0.0,Guilty feelings,Mental health,0,1,0.3376926196269262,NA
+Asian,X2040.0.0,Risk taking,Mental health,0,1,0.3832116788321168,TRUE
+Asian,X2090.0.0,"Seen doctor (GP) for nerves, anxiety, tension or depression",Mental health,0,1,0.23063665855636661,NA
+Asian,X2100.0.0,"Seen a psychiatrist for nerves, anxiety, tension or depression",Mental health,0,1,0.1039132197891322,NA
+Asian,X2188.0.0,"Long-standing illness, disability or infirmity",Other health,0,1,0.32765612327656124,TRUE
+Asian,X2207.0.0,Wears glasses or contact lenses,Other health,0,1,0.8022100567721006,NA
+Asian,X2227.0.0,Other eye problems,Other health,0,1,0.18065693430656937,NA
+Asian,X2257.0.0,Hearing difficulty/problems with background noise,Other health,0,1,0.38270478507704786,TRUE
+Asian,X2316.0.0,Wheeze or whistling in the chest in last year,Other health,0,1,0.2228304947283049,TRUE
+Asian,X2335.0.0,Chest pain or discomfort,Medication history,0,1,0.22414841849148415,NA
+Asian,X2453.0.0,Cancer diagnosed by doctor,Medical condition,0,1,0.03142741281427413,NA
+Asian,X2463.0.0,Fractured/broken bones in last 5 years,Medical condition,0,1,0.06346309813463098,NA
+Asian,X2473.0.0,Other serious medical condition/disability diagnosed by doctor,Medical condition,0,1,0.15135847526358476,TRUE
+Asian,X2492.0.0,Taking other prescription medications,Medication history,0,1,0.4814476885644769,TRUE
+Asian,X3079.0.0,Pace-maker,Operation,0,1,0.0024330900243309,NA
+Asian,X1239.0.0,Current tobacco smoking,Smoking,0,1,0.0949918896999189,NA
+Asian,X1259.0.0,Smoking/smokers in household,Smoking,0,1,0.12043795620437955,NA
+Asian,X1538.0.0,Major dietary changes in the last 5 years,Diet,0,1,0.4700932684509327,TRUE
+Asian,X2159.0.0,Ever had same-sex intercourse,Sexual factors,0,1,0.03588807785888077,NA
+Asian,X2237.0.0,Plays computer games,Electronic device use,0,1,0.20103406326034065,NA
+Asian,X20116.0.0,Smoking status,Smoking,0,1,0.7700729927007299,NA
+Asian,X20117.0.0,Alcohol drinker status,Alcohol,0,1,0.5504866180048662,TRUE
+Asian,X20160.0.0,Ever smoked,Smoking,0,1,0.3295823195458232,NA
+Asian,X22035.0.0,At or above moderate/vigorous recommendation,Physical activity,0,1,0.4794201135442011,NA
+Asian,X22036.0.0,At or above moderate/vigorous/walking recommendation,Physical activity,0,1,0.7503041362530414,NA
+Asian,X1677.0.0,Breastfed as a baby,Early life factors,0,1,0.9011557177615572,NA
+Asian,X1767.0.0,Adopted as a child,Early life factors,0,1,0.0097323600973236,NA
+Asian,X1777.0.0,Part of a multiple birth,Early life factors,0,1,0.0129764801297648,NA
+Asian,X1787.0.0,Maternal smoking around birth,Early life factors,0,1,0.03223844282238443,NA
+Asian,Unnamed: 0_y,Unnamed: 0_y,Other,39,490162,243946.124594485,NA
+Asian,AD,AD,Other,0,1,0.00425790754257907,NA
+Asian,vascular,vascular,Other,0,1,0.00223033252230332,NA
+Asian,Lewy_body,Lewy_body,Other,0,1,2.0275750202757e-4,NA
+Asian,ACD,ACD,Other,0,1,0.0154095701540957,NA
+Asian,Others,Others,Other,0,1,0.00922546634225466,NA
+Black,Unnamed: 0_x,Unnamed: 0_x,Other,50,490192,242029.4412130251,NA
+Black,AF_p20002_i0,History of Atrial Fibrillation determined by self report non-cancer codes,Medical condition,0,1,0.00149142431021625,NA
+Black,AF_ICD10,History of Atrial Fibrillation determined by ICD10 codes,Medical condition,0,1,0.0062142679592344,NA
+Black,Age_p21003_i0,Age at baseline,Socio-demographics,39,70,51.943947303007704,FALSE
+Black,Depression_p20002_i0,Depression determined by self-reported non-cancer illness codes,Medical condition,0,1,0.03231419338801889,NA
+Black,Depression_ICD,Depression determined by ICD codes,Medical condition,0,1,0.0447427293064877,TRUE
+Black,Hchol_p20002_i0,High cholesterol determined by self-reported non-cancer illness codes,Medical condition,0,1,0.36577181208053694,TRUE
+Black,Hchol_ICD10,High cholesterol determined by ICD codes,Medical condition,0,1,0.02460850111856823,NA
+Black,Hchol_med,High cholesterol determined by self reported use of statins,Medical condition,0,1,0.14106388267462092,NA
+Black,History_of_Diabetes_ICD,History of Diabetes determined by ICD codes,Medical condition,0,1,0.17660949540144172,TRUE
+Black,Hypertension_status_p20002_i0,Hypertension status determined by self-reported non-cancer illness codes,Medical condition,0,1,0.36577181208053694,TRUE
+Black,Hypertension_status_ICD10,Hypertension status determined by ICD codes,Medical condition,0,1,0.37385036042754166,TRUE
+Black,Hypertension_status_med,Hypertension status determined by self reported use of antihypertensive medication,Medical condition,0,1,0.03368133233905046,NA
+Black,Medications_ATC_Antihypertensive,Self-reported anti-hypertensive medications based on the ATC codes reported in Supplementary Data 1 of Wu et al. (2019),Medication history,0,1,0.03368133233905046,NA
+Black,Medications_ATC_Statins,Self-reported statin-usemedications based on the ATC codes reported in Supplementary Data 1 of Wu et al. (2019),Medication history,0,1,0.14106388267462092,NA
+Black,Medications_ATC_Aspirin,Self-reported aspirin-use medications based on the ATC codes reported in Supplementary Data 1 of Wu et al. (2019),Medication history,0,1,0.12540392741735024,NA
+Black,Medications_ATC_NSAIDs_excluding_Aspirin,Self-reported NSAIDs excluding aspirin medications based on the ATC codes reported in Supplementary Data 1 of Wu et al. (2019),Medication history,0,1,0.04188416604523987,NA
+Black,Medications_ATC_Hormone_replacement_therapy,Self-reported horone replacement therapy medications based on the ATC codes reported in Supplementary Data 1 of Wu et al. (2019),Medication history,0,1,0.02846134725329356,NA
+Black,StrokeTIA_p20002_i0,History of stroke and/or atransient ischemic stroke (TIA) determined by self-reported non-cancer illness codes,Medical condition,0,1,0.01603281133482476,NA
+Black,StrokeTIA_ICD,History of stroke and/or a transient ischemic stroke (TIA) determined by ICD codes,Medical condition,0,1,0.03107133979617201,TRUE
+Black,TBI_ICD10,History of traumatic brain injury (TBI) determined by ICD codes,Medical condition,0,1,0.0072085508327119,NA
+Black,31-0.0,Sex,Socio-demographics,0,1,0.4228187919463087,TRUE
+Black,X2306.0.0,Weight change compared with 1 year ago,Other health,1,3,2.200845140442456,NA
+Black,X1628.0.0,Alcohol intake versus 10 years previously,Alcohol,1,3,1.5764354958985831,NA
+Black,X2267.0.0,Use of sun/uv protection,Sun Exposoure,1,4,1.6962465821526225,NA
+Black,X1687.0.0,Comparative body size at age 10,Early life factors,1,3,1.7946805866268951,NA
+Black,X1697.0.0,Comparative height size at age 10,Early life factors,1,3,2.0484712900820283,NA
+Black,Household_occupancy_p709_i0,Household occupancy,Socio-demographics,1,52,2.815187670892369,NA
+Black,X23101.0.0,Whole body fat-free mass,Body composition by impedance,25.8,99.9,54.245587869748945,NA
+Black,X23114.0.0,Leg predicted mass (right),Body composition by impedance,3.9,19,8.747303007705693,NA
+Black,X23118.0.0,Leg predicted mass (left),Body composition by impedance,4.1,19.1,8.636055182699478,NA
+Black,X23130.0.0,Trunk predicted mass,Body composition by impedance,10.3,53.2,28.69144916728809,NA
+Black,X404,Duration to first press of snap-button in each round (averaged from 4 repeats),Reaction time,98,1886.75,623.3466940094457,NA
+Black,X403,Number of times snap-button pressed (averaged from 12 repeats),Reaction time,0,34.6666666666667,0.5336606181125197,NA
+Black,X400,Time to complete round (averaged from 2 repeats),Pairs matching,63.5,5318.5,304.85160328113346,FALSE
+Black,X399,Number of incorrect matches in round (averaged from 2 repeats),Pairs matching,0,36.5,3.322831220482227,NA
+Black,X398,Number of correct matches in round (averaged from 2 repeats),Pairs matching,0,4.5,3.91728809346259,FALSE
+Black,X3064,"Peak expiratory flow (PEF, maximum values from 2 measurments)",Spirometry,7,1806,366.1546109868258,NA
+Black,X4080,"Systolic blood pressure, automated reading  (averaged from 2 repeats)",Blood pressure,87.5,236.5,137.78461347253293,NA
+Black,X4079,"Diastolic blood pressure, automated reading  (averaged from 2 repeats)",Blood pressure,47.5,147.5,84.50950782997762,NA
+Black,X102,"Pulse rate, automated reading  (averaged from 2 repeats)",Blood pressure,35.5,127,69.96053939845886,NA
+Black,X20023.0.0,Mean time to correctly identify matches,Reaction time,98,1938,629.858687546607,NA
+Black,X23099.0.0,Body fat percentage,Body composition by impedance,5.4,62.3,33.57863534675615,NA
+Black,X23100.0.0,Whole body fat mass,Body composition by impedance,5,108.4,28.226994780014913,NA
+Black,X23102.0.0,Whole body water mass,Body composition by impedance,18.9,76.4,39.742729306487696,NA
+Black,X23105.0.0,Basal metabolic rate,Body composition by impedance,3531,14284,6807.6553566989805,NA
+Black,X23106.0.0,Impedance of whole body,Body composition by impedance,72,973,584.748322147651,NA
+Black,X23107.0.0,Impedance of leg (right),Body composition by impedance,100,890,240.7234650758141,NA
+Black,X23108.0.0,Impedance of leg (left),Body composition by impedance,100,731,242.4995028585633,NA
+Black,X23109.0.0,Impedance of arm (right),Body composition by impedance,56,992,320.8967188665175,NA
+Black,X23110.0.0,Impedance of arm (left),Body composition by impedance,140,801,323.91076311210537,NA
+Black,X23111.0.0,Leg fat percentage (right),Body composition by impedance,1.4,64.1,34.109259259259254,NA
+Black,X23112.0.0,Leg fat mass (right),Body composition by impedance,0.6,25.2,4.993562018394233,NA
+Black,X23113.0.0,Leg fat-free mass (right),Body composition by impedance,4,23.3,9.280164056674124,NA
+Black,X23115.0.0,Leg fat percentage (left),Body composition by impedance,2.8,64,34.122048222719364,NA
+Black,X23116.0.0,Leg fat mass (left),Body composition by impedance,0.6,25.4,4.932861048968432,NA
+Black,X23117.0.0,Leg fat-free mass (left),Body composition by impedance,4.3,22.7,9.156524981357196,NA
+Black,X23119.0.0,Arm fat percentage (right),Body composition by impedance,1.2,73.3,33.11290082028337,NA
+Black,X23120.0.0,Arm fat mass (right),Body composition by impedance,0.1,10.2,1.5207307979120062,NA
+Black,X23121.0.0,Arm fat-free mass (right),Body composition by impedance,1.3,7.2,2.9496768580661197,NA
+Black,X23122.0.0,Arm predicted mass (right),Body composition by impedance,1,7,2.761098682575193,NA
+Black,X23123.0.0,Arm fat percentage (left),Body composition by impedance,7.3,73.7,33.79610986825752,NA
+Black,X23124.0.0,Arm fat mass (left),Body composition by impedance,0.1,12.3,1.628125776783495,NA
+Black,X23125.0.0,Arm fat-free mass (left),Body composition by impedance,1.3,7,3.014267959234402,NA
+Black,X23126.0.0,Arm predicted mass (left),Body composition by impedance,1.3,6.4,2.8229803629132486,NA
+Black,X23127.0.0,Trunk fat percentage,Body composition by impedance,3,77.6,33.09088988317176,NA
+Black,X23128.0.0,Trunk fat mass,Body composition by impedance,0.7,45.8,15.179468058662687,NA
+Black,X23129.0.0,Trunk fat-free mass,Body composition by impedance,10.4,57.6,29.932749192145163,NA
+Black,X48.0.0,Waist circumference,Body size measures,32,176,92.89337559035546,FALSE
+Black,X49.0.0,Hip circumference,Body size measures,76,179,106.20546855580412,NA
+Black,X50.0.0,Standing height,Body size measures,140,204,167.26025354213274,NA
+Black,X51.0.0,Seated height,Body size measures,102,173,132.7192393736018,NA
+Black,X3077.0.0,Seating box height,Body size measures,30,50,46.696495152870995,FALSE
+Black,X20015.0.0,Sitting height,Body size measures,59,123,86.0227442207308,FALSE
+Black,X21001.0.0,Body mass index (BMI),Body size measures,16.1489,68.1299,29.50887631121054,NA
+Black,X21002.0.0,Weight,Body size measures,41.6,192.5,82.52936863037534,NA
+Black,X46.0.0,Hand grip strength (left),Hand grip strength,0,80,30.544121302510565,NA
+Black,X47.0.0,Hand grip strength (right),Hand grip strength,0,80,32.258637832463336,FALSE
+Black,X20150.0.0,"Forced expiratory volume in 1-second (FEV1), Best measure",Spirometry,0.21,9.51,2.6286241610738257,NA
+Black,X20151.0.0,"Forced vital capacity (FVC), Best measure",Spirometry,0.3,12.21,3.4894108873974647,NA
+Black,X30600.0.0,Albumin,Blood biochemistry,22.85,55.71,44.57186800894855,NA
+Black,X30610.0.0,Alkaline phosphatase,Blood biochemistry,9.4,1106.9,84.2552448421576,NA
+Black,X30620.0.0,Alanine aminotransferase,Blood biochemistry,4.11,436.81,22.42847253293562,FALSE
+Black,X30630.0.0,Apolipoprotein A,Blood biochemistry,0.528,2.493,1.4967044494158588,NA
+Black,X30640.0.0,Apolipoprotein B,Blood biochemistry,0.401,1.973,0.9690160328113347,NA
+Black,X30650.0.0,Aspartate aminotransferase,Blood biochemistry,9.2,579.5,27.04956500124285,FALSE
+Black,X30660.0.0,Direct bilirubin,Blood biochemistry,1,15.16,1.7597501864280387,NA
+Black,X30670.0.0,Urea,Blood biochemistry,1.3,31.25,4.860539398458861,NA
+Black,X30680.0.0,Calcium,Blood biochemistry,1.409,3.26,2.377932015908526,FALSE
+Black,X30690.0.0,Cholesterol,Blood biochemistry,1.801,10.859,5.272733780760627,NA
+Black,X30700.0.0,Creatinine,Blood biochemistry,28.9,1174.9,79.15796669152374,NA
+Black,X30710.0.0,C-reactive protein,Blood biochemistry,0.08,65.87,2.850555555555556,NA
+Black,X30720.0.0,Cystatin C,Blood biochemistry,0.491,6.021,0.8646167039522744,NA
+Black,X30730.0.0,Gamma glutamyltransferase,Blood biochemistry,5.9,979.3,41.49639572458364,NA
+Black,X30740.0.0,Glucose,Blood biochemistry,2.017,31.18,5.164811583395475,NA
+Black,X30750.0.0,Glycated haemoglobin (HbA1c),Blood biochemistry,17,152.3,39.10031071339796,NA
+Black,X30760.0.0,HDL cholesterol,Blood biochemistry,0.485,3.971,1.4292423564504102,NA
+Black,X30770.0.0,Insulin-like Growth Factor 1 (IGF-1),Blood biochemistry,5.292,96.261,22.330636589609743,FALSE
+Black,X30780.0.0,LDL direct,Blood biochemistry,0.849,7.141,3.2844305244842156,NA
+Black,X30790.0.0,Lipoprotein A,Blood biochemistry,3.8,189,71.26040144171016,NA
+Black,X30810.0.0,Phosphate,Blood biochemistry,0.465,2.308,1.1488267462092967,NA
+Black,X30830.0.0,Sex hormone-binding globulin (SHBG),Blood biochemistry,4.57,236.68,48.51871488938603,FALSE
+Black,X30840.0.0,Total bilirubin,Blood biochemistry,2.22,121.36,8.943105891126025,NA
+Black,X30850.0.0,Testosterone,Blood biochemistry,0.352,46.885,5.927587124036788,NA
+Black,X30860.0.0,Total protein,Blood biochemistry,52.03,105.49,75.49873974645787,NA
+Black,X30870.0.0,Triglycerides,Blood biochemistry,0.277,10.245,1.2655963211533685,FALSE
+Black,X30880.0.0,Urate,Blood biochemistry,100.9,1067.5,310.8695128013921,FALSE
+Black,X30890.0.0,Vitamin D,Blood biochemistry,10,124,34.351106139696746,FALSE
+Black,X30000.0.0,White blood cell (leukocyte) count,Blood count,2.2,22.53,5.87711285110614,NA
+Black,X30010.0.0,Red blood cell (erythrocyte) count,Blood count,1.8,7.296,4.593779766343524,NA
+Black,X30020.0.0,Haemoglobin concentration,Blood count,4.78,18.58,13.590326870494655,NA
+Black,X30030.0.0,Haematocrit percentage,Blood count,14.4,55.08,40.20929157345265,NA
+Black,X30040.0.0,Mean corpuscular volume,Blood count,56.93,133.6,87.89064628386775,NA
+Black,X30050.0.0,Mean corpuscular haemoglobin,Blood count,16.67,56.9,29.73352846134725,NA
+Black,X30060.0.0,Mean corpuscular haemoglobin concentration,Blood count,25.56,71,33.8039336316182,NA
+Black,X30070.0.0,Red blood cell (erythrocyte) distribution width,Blood count,11.09,37.19,14.153571961222967,NA
+Black,X30080.0.0,Platelet count,Blood count,22.8,882,236.6783743475019,NA
+Black,X30090.0.0,Plateletcrit,Blood count,0.02,0.701,0.2251462838677604,FALSE
+Black,X30100.0.0,Mean platelet (thrombocyte) volume,Blood count,6.34,16.24,9.69296047725578,NA
+Black,X30110.0.0,Platelet distribution width,Blood count,13.71,19.6,16.36514914243102,NA
+Black,X30120.0.0,Lymphocyte count,Blood count,0.02,16.69,2.091229182202337,NA
+Black,X30130.0.0,Monocyte count,Blood count,0,4.54,0.3987298036291325,NA
+Black,X30140.0.0,Neutrophill count,Blood count,0.14,13.21,3.1873328361918967,NA
+Black,X30150.0.0,Eosinophill count,Blood count,0,2.29,0.16185558041262738,NA
+Black,X30160.0.0,Basophill count,Blood count,0,1.64,0.03431145911011683,NA
+Black,X30170.0.0,Nucleated red blood cell count,Blood count,0,3.27,0.01563136962465821,NA
+Black,X30180.0.0,Lymphocyte percentage,Blood count,0.75,89,36.449379816057665,NA
+Black,X30190.0.0,Monocyte percentage,Blood count,0.06,65.5,6.973861546109868,NA
+Black,X30200.0.0,Neutrophill percentage,Blood count,3,89.1,53.1584737757892,NA
+Black,X30210.0.0,Eosinophill percentage,Blood count,0,30.24,2.7779629629629627,NA
+Black,X30220.0.0,Basophill percentage,Blood count,0,26.25,0.641176982351479,NA
+Black,X30230.0.0,Nucleated red blood cell percentage,Blood count,0,81.97,0.29520258513547104,NA
+Black,X30240.0.0,Reticulocyte percentage,Blood count,0,8.114,1.40421799652001,NA
+Black,X30250.0.0,Reticulocyte count,Blood count,0,0.311,0.06403119562515534,NA
+Black,X30260.0.0,Mean reticulocyte volume,Blood count,52.92,171.3,110.2979853343276,NA
+Black,X30270.0.0,Mean sphered cell volume,Blood count,49.67,137.8,84.82744593586875,NA
+Black,X30280.0.0,Immature reticulocyte fraction,Blood count,0.033,0.638,0.32508563261247825,FALSE
+Black,X30290.0.0,High light scatter reticulocyte percentage,Blood count,0,4.505,0.469253666418096,NA
+Black,X30300.0.0,High light scatter reticulocyte count,Blood count,0,0.134,0.02131580909768829,NA
+Black,X30510.0.0,Creatinine (enzymatic) in urine,Urine biochemistry,597,63571,12528.105891126026,FALSE
+Black,X30520.0.0,Potassium in urine,Urine biochemistry,3.1,192.9,59.91728809346259,FALSE
+Black,X30530.0.0,Sodium in urine,Urine biochemistry,10.2,300.1,103.986278896346,NA
+Black,X1807.0.0,Father's age at death,Family history,1,120,69.36751180710912,NA
+Black,X1873.0.0,Number of full brothers,Family history,0,25,2.508327119065374,NA
+Black,X1883.0.0,Number of full sisters,Family history,0,19,2.3883917474521503,NA
+Black,X87.0.0,Non-cancer illness year/age first occurred,Medical condition,0,2010,731.0070842654735,FALSE
+Black,X92.0.0,Operation year/age first occurred,Operation,0,2010,1373.7421078796915,FALSE
+Black,X134.0.0,Number of self-reported cancers,Medical condition,0,3,0.04412130251056426,NA
+Black,X135.0.0,Number of self-reported non-cancer illnesses,Medical condition,0,16,1.7365150385284611,NA
+Black,X136.0.0,"Number of operations, self-reported",Operation,0,12,1.172135222470793,NA
+Black,X137.0.0,Number of treatments/medications taken,Medication history,0,23,2.4428287347750435,FALSE
+Black,X2050.0.0,Frequency of depressed mood in last 2 weeks,Mental health,1,4,1.5162813820531942,NA
+Black,X2060.0.0,Frequency of unenthusiasm / disinterest in last 2 weeks,Mental health,1,4,1.5973154362416109,NA
+Black,X2070.0.0,Frequency of tenseness / restlessness in last 2 weeks,Mental health,1,4,1.4634601043997018,NA
+Black,X2080.0.0,Frequency of tiredness / lethargy in last 2 weeks,Mental health,1,4,1.9300273427790209,FALSE
+Black,X2217.0.0,Age started wearing glasses or contact lenses,Other health,1,68,32.87484464330102,NA
+Black,X2296.0.0,Falls in the last year,Other health,1,3,1.2854834700472284,FALSE
+Black,X20008.0.0,Interpolated Year when non-cancer illness first diagnosed,Medical condition,1940,2010.5,1997.3904424558789,NA
+Black,X20009.0.0,Interpolated Age of participant when non-cancer illness first diagnosed,Medical condition,0,69.5,40.72289336316182,NA
+Black,X20010.0.0,Interpolated Year when operation took place,Operation,1940.5,2010.51,1991.956564752672,NA
+Black,X20011.0.0,Interpolated Age of participant when operation took place,Operation,0,70,35.28895103156849,NA
+Black,X20127.0.0,Neuroticism score,Mental health,0,12,4.055555555555555,NA
+Black,X6138.0.0,Education,Socio-demographics,1,6,2.846631866766095,NA
+Black,X864.0.0,Number of days/week walked 10+ minutes,Physical activity,0,7,5.183942331593339,NA
+Black,X874.0.0,Duration of walks,Physical activity,0,1260,59.47588864031817,NA
+Black,X884.0.0,Number of days/week of moderate physical activity 10+ minutes,Physical activity,0,7,3.5338056176982353,NA
+Black,X894.0.0,Duration of moderate activity,Physical activity,0,1200,53.48508575689784,NA
+Black,X904.0.0,Number of days/week of vigorous physical activity 10+ minutes,Physical activity,0,7,2.1369624658215263,NA
+Black,X924.0.0,Usual walking pace,Physical activity,1,3,2.1147153865274673,NA
+Black,X943.0.0,Frequency of stair climbing in last 4 weeks,Physical activity,0,5,2.034178473775789,NA
+Black,X1031.0.0,Frequency of friend/family visits,Social Support,1,7,3.2885906040268456,NA
+Black,X1050.0.0,Time spend outdoors in summer,Sun Exposoure,0,24,4.333457618692518,NA
+Black,X1060.0.0,Time spent outdoors in winter,Sun Exposoure,0,24,2.7790206313696246,NA
+Black,X1070.0.0,Time spent watching television (TV),Physical activity,0,24,3.207183693760875,FALSE
+Black,X1080.0.0,Time spent using computer,Physical activity,0,20,1.5902311707680836,NA
+Black,X1100.0.0,Drive faster than motorway speed limit,Physical activity,1,4,1.4180959482972906,FALSE
+Black,X1110.0.0,Length of mobile phone use,Electronic device use,0,4,3.143549589858315,FALSE
+Black,X1120.0.0,Weekly usage of mobile phone in last 3 months,Electronic device use,0,5,2.164926671638081,NA
+Black,X1130.0.0,Hands-free device/speakerphone use with mobile phone in last 3 month,Electronic device use,0,4,0.5976882923191648,NA
+Black,X1160.0.0,Sleep duration,Sleep,1,22,6.714143673875218,NA
+Black,X1170.0.0,Getting up in morning,Sleep,1,4,2.9898086005468554,NA
+Black,X1180.0.0,Morning/evening person (chronotype),Sleep,1,4,2.1314939100174,NA
+Black,X1190.0.0,Nap during day,Sleep,1,3,1.5961968680089484,NA
+Black,X1200.0.0,Sleeplessness / insomnia,Sleep,1,3,1.9056674123788215,FALSE
+Black,X1220.0.0,Daytime dozing / sleeping,Sleep,0,3,0.49527715635098185,NA
+Black,X1269.0.0,Exposure to tobacco smoke at home,Smoking,0,100,0.5096942580164057,NA
+Black,X1279.0.0,Exposure to tobacco smoke outside home,Smoking,0,140,1.3517275664926671,NA
+Black,X1289.0.0,Cooked vegetable intake,Diet,0,40,2.9389758886403183,NA
+Black,X1299.0.0,Salad / raw vegetable intake,Diet,0,50,2.586502609992543,NA
+Black,X1309.0.0,Fresh fruit intake,Diet,0,33,2.6433010191399453,NA
+Black,X1319.0.0,Dried fruit intake,Diet,0,50,1.016778523489933,NA
+Black,X1329.0.0,Oily fish intake,Diet,0,5,1.95227442207308,NA
+Black,X1339.0.0,Non-oily fish intake,Diet,0,5,1.8339547601292567,NA
+Black,X1349.0.0,Processed meat intake,Diet,0,5,1.5986825751926423,NA
+Black,X1359.0.0,Poultry intake,Diet,0,5,2.622048222719364,NA
+Black,X1369.0.0,Beef intake,Diet,0,5,1.457742977877206,NA
+Black,X1379.0.0,Lamb/mutton intake,Diet,0,5,1.4353716132239622,NA
+Black,X1389.0.0,Pork intake,Diet,0,5,0.955754412130251,NA
+Black,X1408.0.0,Cheese intake,Diet,0,5,1.77889634601044,NA
+Black,X1438.0.0,Bread intake,Diet,0,75,8.801143425304499,NA
+Black,X1458.0.0,Cereal intake,Diet,0,77,3.335819040517027,NA
+Black,X1478.0.0,Salt added to food,Diet,1,4,1.8585632612478251,NA
+Black,X1488.0.0,Tea intake,Diet,0,66,2.5444941585881184,NA
+Black,X1518.0.0,Hot drink temperature,Diet,1,3,1.9059159830971912,NA
+Black,X1528.0.0,Water intake,Diet,0,40,3.9757643549589856,FALSE
+Black,X1548.0.0,Variation in diet,Diet,1,3,1.8775789212030825,NA
+Black,X1558.0.0,Alcohol intake frequency,Alcohol,1,6,4.150882426050211,NA
+Black,X1727.0.0,Ease of skin tanning,Sun Exposoure,1,4,2.1973651503852847,NA
+Black,X1737.0.0,Childhood sunburn occasions,Sun Exposoure,0,25,0.20979368630375345,NA
+Black,X2110.0.0,Able to confide,Social Support,0,5,2.941834451901566,NA
+Black,X2139.0.0,Age first had sexual intercourse,Sexual factors,3,67,18.223837931891623,NA
+Black,X2149.0.0,Lifetime number of sexual partners,Sexual factors,1,3500,10.939224459358687,NA
+Black,X2277.0.0,Frequency of solarium/sunlamp use,Sun Exposoure,0,100,0.09234402187422322,NA
+Black,X22033.0.0,Summed days activity,Physical activity,0,21,10.475391498881432,FALSE
+Black,X22034.0.0,Summed minutes activity,Physical activity,0,540,119.23601789709171,NA
+Black,X22037.0.0,MET minutes per week for walking,Physical activity,0,4158,918.0000372856076,NA
+Black,X22038.0.0,MET minutes per week for moderate activity,Physical activity,0,5040,799.0708426547353,NA
+Black,X22039.0.0,MET minutes per week for vigorous activity,Physical activity,0,10080,804.5796669152373,FALSE
+Black,X6142.0.0,Current employment status,Socio-demographics,0,1,0.6703952274422073,TRUE
+Black,X1140.0.0,Difference in mobile phone use compared to two years previously,Electronic device use,0,1,0.3655232413621675,NA
+Black,X6144.0.0,"Never eat eggs, dairy, wheat, sugar",Diet,0,1,0.06922694506587124,NA
+Black,X6162.0.0,Types of transport used (excluding work),Physical activity,0,1,0.5284613472532935,NA
+Black,X1210.0.0,Snoring,Sleep,0,1,0.6556052696992294,NA
+Black,X1468.0.0,Cereal type,Diet,0,1,0.30822769077802636,TRUE
+Black,X6164,Types of physical activity in last 4 weeks,Physical activity,0,1,0.6052696992294307,NA
+Black,X3059,Blow result ranking,Spirometry,0,1,0.7920705940840169,NA
+Black,X2247.0.0,Hearing difficulty/problems,Other health,0,1,0.12652249565001242,TRUE
+Black,X1150.0.0,Usual side of head for mobile phone use,Electronic device use,0,1,0.4809843400447427,TRUE
+Black,X1249.0.0,Past tobacco smoking,Smoking,0,1,0.6200596569724086,NA
+Black,X1418.0.0,Milk type used,Diet,0,1,0.5241113596818294,NA
+Black,X1428.0.0,Spread type,Diet,0,1,0.36017897091722595,NA
+Black,X1448.0.0,Bread type,Diet,0,1,0.4261744966442953,NA
+Black,X1508.0.0,Coffee type,Diet,0,1,0.5576684066616953,NA
+Black,X1717.0.0,Skin colour,Sun Exposoure,0,1,0.04610986825751926,NA
+Black,X1747.0.0,"Hair colour (natural, before greying)",Sun Exposoure,0,1,0.13435247327864777,NA
+Black,X1757.0.0,Facial ageing,Sun Exposoure,0,1,0.8983345761869251,TRUE
+Black,X1647.0.0,Country of birth (UK/elsewhere),Early life factors,0,1,0.27914491672880937,NA
+Black,X1707.0.0,Handedness (chirality/laterality),Early life factors,0,1,0.9178473775789212,NA
+Black,APOE4status,APOE4 status,Medical condition,0,1,0.40566741237882176,TRUE
+Black,History_of_Diabetes_p2443_i0,History of Diabetes diagnosed by doctor,Medical condition,0,1,0.11446681580909768,NA
+Black,Physical_Activity_p22032_i0,IPAQ activity group,Physical activity,0,1,0.7834949043002735,NA
+Black,X1797.0.0,Father still alive,Family history,0,1,0.3150633855331842,NA
+Black,X1835.0.0,Mother still alive,Family history,0,1,0.539025602783992,TRUE
+Black,X1920.0.0,Mood swings,Mental health,0,1,0.5123042505592841,NA
+Black,X1930.0.0,Miserableness,Mental health,0,1,0.39025602783992047,NA
+Black,X1940.0.0,Irritability,Mental health,0,1,0.20444941585881185,NA
+Black,X1950.0.0,Sensitivity / hurt feelings,Mental health,0,1,0.4376087496892866,NA
+Black,X1960.0.0,Fed-up feelings,Mental health,0,1,0.4000745712155108,NA
+Black,X1970.0.0,Nervous feelings,Mental health,0,1,0.1758637832463336,NA
+Black,X1980.0.0,Worrier / anxious feelings,Mental health,0,1,0.4520258513547104,NA
+Black,X1990.0.0,Tense / 'highly strung',Mental health,0,1,0.19388516032811337,NA
+Black,X2000.0.0,Worry too long after embarrassment,Mental health,0,1,0.426671638081034,TRUE
+Black,X2010.0.0,Suffer from 'nerves',Mental health,0,1,0.16169525229927914,NA
+Black,X2020.0.0,"Loneliness, isolation",Mental health,0,1,0.27193636589609743,NA
+Black,X2030.0.0,Guilty feelings,Mental health,0,1,0.31332339050459856,NA
+Black,X2040.0.0,Risk taking,Mental health,0,1,0.41312453392990306,TRUE
+Black,X2090.0.0,"Seen doctor (GP) for nerves, anxiety, tension or depression",Mental health,0,1,0.2339050459855829,NA
+Black,X2100.0.0,"Seen a psychiatrist for nerves, anxiety, tension or depression",Mental health,0,1,0.08985831469052946,NA
+Black,X2188.0.0,"Long-standing illness, disability or infirmity",Other health,0,1,0.3630375341784738,TRUE
+Black,X2207.0.0,Wears glasses or contact lenses,Other health,0,1,0.7715635098185434,NA
+Black,X2227.0.0,Other eye problems,Other health,0,1,0.22582649763857815,NA
+Black,X2257.0.0,Hearing difficulty/problems with background noise,Other health,0,1,0.24832214765100671,TRUE
+Black,X2316.0.0,Wheeze or whistling in the chest in last year,Other health,0,1,0.2254536415610241,TRUE
+Black,X2335.0.0,Chest pain or discomfort,Medication history,0,1,0.2546607009694258,NA
+Black,X2453.0.0,Cancer diagnosed by doctor,Medical condition,0,1,0.04188416604523987,NA
+Black,X2463.0.0,Fractured/broken bones in last 5 years,Medical condition,0,1,0.05878697489435745,NA
+Black,X2473.0.0,Other serious medical condition/disability diagnosed by doctor,Medical condition,0,1,0.16355953268704945,TRUE
+Black,X2492.0.0,Taking other prescription medications,Medication history,0,1,0.4158588118319662,TRUE
+Black,X3079.0.0,Pace-maker,Operation,0,1,0.00260999254287844,NA
+Black,X1239.0.0,Current tobacco smoking,Smoking,0,1,0.12378821774794928,NA
+Black,X1259.0.0,Smoking/smokers in household,Smoking,0,1,0.13335819040517027,NA
+Black,X1538.0.0,Major dietary changes in the last 5 years,Diet,0,1,0.5526969922943077,TRUE
+Black,X2159.0.0,Ever had same-sex intercourse,Sexual factors,0,1,0.0395227442207308,NA
+Black,X2237.0.0,Plays computer games,Electronic device use,0,1,0.23241362167536664,NA
+Black,X20116.0.0,Smoking status,Smoking,0,1,0.7012179965200099,NA
+Black,X20117.0.0,Alcohol drinker status,Alcohol,0,1,0.7747949291573453,TRUE
+Black,X20160.0.0,Ever smoked,Smoking,0,1,0.4221973651503853,NA
+Black,X22035.0.0,At or above moderate/vigorous recommendation,Physical activity,0,1,0.5232413621675367,NA
+Black,X22036.0.0,At or above moderate/vigorous/walking recommendation,Physical activity,0,1,0.7793934874471787,NA
+Black,X1677.0.0,Breastfed as a baby,Early life factors,0,1,0.9168530947054436,NA
+Black,X1767.0.0,Adopted as a child,Early life factors,0,1,0.01889137459607258,NA
+Black,X1777.0.0,Part of a multiple birth,Early life factors,0,1,0.02672135222470793,NA
+Black,X1787.0.0,Maternal smoking around birth,Early life factors,0,1,0.05393984588615461,NA
+Black,Unnamed: 0_y,Unnamed: 0_y,Other,50,490192,242029.4412130251,NA
+Black,AD,AD,Other,0,1,0.00509569972657221,NA
+Black,vascular,vascular,Other,0,1,0.00385284613472532,NA
+Black,Lewy_body,Lewy_body,Other,0,1,0.00136713895103156,NA
+Black,ACD,ACD,Other,0,1,0.01652995277156351,NA
+Black,Others,Others,Other,0,1,0.00708426547352721,NA
+White,Unnamed: 0_x,Unnamed: 0_x,Other,1,490283,245217.22692936045,NA
+White,AF_p20002_i0,History of Atrial Fibrillation determined by self report non-cancer codes,Medical condition,0,1,0.0077299435722595,NA
+White,AF_ICD10,History of Atrial Fibrillation determined by ICD10 codes,Medical condition,0,1,0.01527765711512911,NA
+White,Age_p21003_i0,Age at baseline,Socio-demographics,38,73,56.75827610392197,FALSE
+White,Depression_p20002_i0,Depression determined by self-reported non-cancer illness codes,Medical condition,0,1,0.0595892196104939,NA
+White,Depression_ICD,Depression determined by ICD codes,Medical condition,0,1,0.05768004220956029,TRUE
+White,Hchol_p20002_i0,High cholesterol determined by self-reported non-cancer illness codes,Medical condition,0,1,0.2592073841303072,TRUE
+White,Hchol_ICD10,High cholesterol determined by ICD codes,Medical condition,0,1,0.02398655735690175,NA
+White,Hchol_med,High cholesterol determined by self reported use of statins,Medical condition,0,1,0.16349847753167307,NA
+White,History_of_Diabetes_ICD,History of Diabetes determined by ICD codes,Medical condition,0,1,0.0774625951675139,TRUE
+White,Hypertension_status_p20002_i0,Hypertension status determined by self-reported non-cancer illness codes,Medical condition,0,1,0.2592073841303072,TRUE
+White,Hypertension_status_ICD10,Hypertension status determined by ICD codes,Medical condition,0,1,0.2896461558999091,TRUE
+White,Hypertension_status_med,Hypertension status determined by self reported use of antihypertensive medication,Medical condition,0,1,0.01428386776880518,NA
+White,Medications_ATC_Antihypertensive,Self-reported anti-hypertensive medications based on the ATC codes reported in Supplementary Data 1 of Wu et al. (2019),Medication history,0,1,0.01428386776880518,NA
+White,Medications_ATC_Statins,Self-reported statin-usemedications based on the ATC codes reported in Supplementary Data 1 of Wu et al. (2019),Medication history,0,1,0.16349847753167307,NA
+White,Medications_ATC_Aspirin,Self-reported aspirin-use medications based on the ATC codes reported in Supplementary Data 1 of Wu et al. (2019),Medication history,0,1,0.13827445113798414,NA
+White,Medications_ATC_NSAIDs_excluding_Aspirin,Self-reported NSAIDs excluding aspirin medications based on the ATC codes reported in Supplementary Data 1 of Wu et al. (2019),Medication history,0,1,0.0828765222034577,NA
+White,Medications_ATC_Hormone_replacement_therapy,Self-reported horone replacement therapy medications based on the ATC codes reported in Supplementary Data 1 of Wu et al. (2019),Medication history,0,1,0.05201184071400268,NA
+White,StrokeTIA_p20002_i0,History of stroke and/or atransient ischemic stroke (TIA) determined by self-reported non-cancer illness codes,Medical condition,0,1,0.01667616664300501,NA
+White,StrokeTIA_ICD,History of stroke and/or a transient ischemic stroke (TIA) determined by ICD codes,Medical condition,0,1,0.03105326838033526,TRUE
+White,TBI_ICD10,History of traumatic brain injury (TBI) determined by ICD codes,Medical condition,0,1,0.00962216934255219,NA
+White,31-0.0,Sex,Socio-demographics,0,1,0.455390724491504,TRUE
+White,X2306.0.0,Weight change compared with 1 year ago,Other health,1,3,2.130809376794489,NA
+White,X1628.0.0,Alcohol intake versus 10 years previously,Alcohol,1,3,1.7060672005017683,NA
+White,X2267.0.0,Use of sun/uv protection,Sun Exposoure,1,4,2.7036388794124564,NA
+White,X1687.0.0,Comparative body size at age 10,Early life factors,1,3,1.8302845119307696,NA
+White,X1697.0.0,Comparative height size at age 10,Early life factors,1,3,2.0508252265691382,NA
+White,Household_occupancy_p709_i0,Household occupancy,Socio-demographics,1,100,2.3954158552839293,NA
+White,X23101.0.0,Whole body fat-free mass,Body composition by impedance,18.7,100,53.33188262690945,NA
+White,X23114.0.0,Leg predicted mass (right),Body composition by impedance,2.2,23.1,8.502247786222988,NA
+White,X23118.0.0,Leg predicted mass (left),Body composition by impedance,2.2,22.9,8.405881792041635,NA
+White,X23130.0.0,Trunk predicted mass,Body composition by impedance,2,56.5,28.425941292265183,NA
+White,X404,Duration to first press of snap-button in each round (averaged from 4 repeats),Reaction time,23.5,2234,556.3916631880508,NA
+White,X403,Number of times snap-button pressed (averaged from 12 repeats),Reaction time,0,62.25,0.5224999346655902,NA
+White,X400,Time to complete round (averaged from 2 repeats),Pairs matching,25.5,6906.5,212.59796771138153,FALSE
+White,X399,Number of incorrect matches in round (averaged from 2 repeats),Pairs matching,0,87,2.315126575707042,NA
+White,X398,Number of correct matches in round (averaged from 2 repeats),Pairs matching,0,4.5,4.401798144220235,FALSE
+White,X3064,"Peak expiratory flow (PEF, maximum values from 2 measurments)",Spirometry,7,2850,405.00175025586367,NA
+White,X4080,"Systolic blood pressure, automated reading  (averaged from 2 repeats)",Blood pressure,72,253.5,137.9931186974367,NA
+White,X4079,"Diastolic blood pressure, automated reading  (averaged from 2 repeats)",Blood pressure,36.5,147.5,82.18557267905689,NA
+White,X102,"Pulse rate, automated reading  (averaged from 2 repeats)",Blood pressure,30.5,173,69.30157798491729,NA
+White,X20023.0.0,Mean time to correctly identify matches,Reaction time,63,2000,557.3297537139963,NA
+White,X23099.0.0,Body fat percentage,Body composition by impedance,5,69.8,31.41398318822031,NA
+White,X23100.0.0,Whole body fat mass,Body composition by impedance,5,109.8,24.829278644547617,NA
+White,X23102.0.0,Whole body water mass,Body composition by impedance,18.9,84.3,39.03158279494249,NA
+White,X23105.0.0,Basal metabolic rate,Body composition by impedance,3364,15506,6630.511125567085,NA
+White,X23106.0.0,Impedance of whole body,Body composition by impedance,51,998,599.8766111995186,NA
+White,X23107.0.0,Impedance of leg (right),Body composition by impedance,99,890,247.14789873943437,NA
+White,X23108.0.0,Impedance of leg (left),Body composition by impedance,99,731,247.8372685837548,NA
+White,X23109.0.0,Impedance of arm (right),Body composition by impedance,56,998,325.57970974570435,NA
+White,X23110.0.0,Impedance of arm (left),Body composition by impedance,58,999,332.39515098605517,NA
+White,X23111.0.0,Leg fat percentage (right),Body composition by impedance,1,74.9,32.02534184022664,NA
+White,X23112.0.0,Leg fat mass (right),Body composition by impedance,0.1,30.6,4.310638419599474,NA
+White,X23113.0.0,Leg fat-free mass (right),Body composition by impedance,1.8,24.4,8.9979132542681,NA
+White,X23115.0.0,Leg fat percentage (left),Body composition by impedance,1.5,68.2,31.928261758604545,NA
+White,X23116.0.0,Leg fat mass (left),Body composition by impedance,0.1,27,4.243406133523758,NA
+White,X23117.0.0,Leg fat-free mass (left),Body composition by impedance,0.7,24.2,8.89349375226463,NA
+White,X23119.0.0,Arm fat percentage (right),Body composition by impedance,1.1,74.9,29.44450523487544,NA
+White,X23120.0.0,Arm fat mass (right),Body composition by impedance,0.1,19,1.2373423233481164,NA
+White,X23121.0.0,Arm fat-free mass (right),Body composition by impedance,0.7,26,2.9021943885864676,NA
+White,X23122.0.0,Arm predicted mass (right),Body composition by impedance,0.9,24.9,2.7179053717598527,NA
+White,X23123.0.0,Arm fat percentage (left),Body composition by impedance,1,74.6,30.352942273340805,NA
+White,X23124.0.0,Arm fat mass (left),Body composition by impedance,0.1,23.1,1.3182698318186352,NA
+White,X23125.0.0,Arm fat-free mass (left),Body composition by impedance,0.9,37.2,2.9335267231862288,NA
+White,X23126.0.0,Arm predicted mass (left),Body composition by impedance,0.8,32.7,2.747719687835722,NA
+White,X23127.0.0,Trunk fat percentage,Body composition by impedance,2,75.6,31.1710078380102,NA
+White,X23128.0.0,Trunk fat mass,Body composition by impedance,0.5,59.9,13.745201523104011,NA
+White,X23129.0.0,Trunk fat-free mass,Body composition by impedance,2,58.8,29.63507546654067,NA
+White,X48.0.0,Waist circumference,Body size measures,20,197,90.28073063647014,FALSE
+White,X49.0.0,Hip circumference,Body size measures,30,195,103.43732234161352,NA
+White,X50.0.0,Standing height,Body size measures,75,209,168.62924537697256,NA
+White,X51.0.0,Seated height,Body size measures,70,174,137.21219500308305,NA
+White,X3077.0.0,Seating box height,Body size measures,30,50,47.89969296359001,FALSE
+White,X20015.0.0,Sitting height,Body size measures,20,124,89.31250203949304,FALSE
+White,X21001.0.0,Body mass index (BMI),Body size measures,12.1212,74.6837,27.40864144885588,NA
+White,X21002.0.0,Weight,Body size measures,30,197.7,78.15967238854832,NA
+White,X46.0.0,Hand grip strength (left),Hand grip strength,0,89,29.624983313238587,NA
+White,X47.0.0,Hand grip strength (right),Hand grip strength,0,90,31.781758350267307,FALSE
+White,X20150.0.0,"Forced expiratory volume in 1-second (FEV1), Best measure",Spirometry,0.09,14.65,2.786083092655494,NA
+White,X20151.0.0,"Forced vital capacity (FVC), Best measure",Spirometry,0.3,17.24,3.712951109378278,NA
+White,X30600.0.0,Albumin,Blood biochemistry,18.87,59.8,45.22212206869224,NA
+White,X30610.0.0,Alkaline phosphatase,Blood biochemistry,8,1416.7,83.60771892501235,NA
+White,X30620.0.0,Alanine aminotransferase,Blood biochemistry,3.01,495.19,23.50738451171888,FALSE
+White,X30630.0.0,Apolipoprotein A,Blood biochemistry,0.419,2.5,1.545917858754775,NA
+White,X30640.0.0,Apolipoprotein B,Blood biochemistry,0.4,2,1.0341664247527709,NA
+White,X30650.0.0,Aspartate aminotransferase,Blood biochemistry,3.3,947.2,26.18098874623621,FALSE
+White,X30660.0.0,Direct bilirubin,Blood biochemistry,1,70.06,1.7331515836001448,NA
+White,X30670.0.0,Urea,Blood biochemistry,0.81,41.83,5.426348067831952,NA
+White,X30680.0.0,Calcium,Blood biochemistry,1.05,3.572,2.380143417152083,FALSE
+White,X30690.0.0,Cholesterol,Blood biochemistry,0.601,15.46,5.710077901218611,NA
+White,X30700.0.0,Creatinine,Blood biochemistry,10.7,1499.3,72.19152672742415,NA
+White,X30710.0.0,C-reactive protein,Blood biochemistry,0.08,79.96,2.6031695947077,NA
+White,X30720.0.0,Cystatin C,Blood biochemistry,0.295,7.487,0.9082774473387,NA
+White,X30730.0.0,Gamma glutamyltransferase,Blood biochemistry,5,1184.9,37.25458276739607,NA
+White,X30740.0.0,Glucose,Blood biochemistry,0.995,36.813,5.117079517980384,NA
+White,X30750.0.0,Glycated haemoglobin (HbA1c),Blood biochemistry,15,515.2,35.97290811580506,NA
+White,X30760.0.0,HDL cholesterol,Blood biochemistry,0.219,4.401,1.4530819780857795,NA
+White,X30770.0.0,Insulin-like Growth Factor 1 (IGF-1),Blood biochemistry,1.445,126.766,21.390569233637965,FALSE
+White,X30780.0.0,LDL direct,Blood biochemistry,0.266,9.797,3.568232211912335,NA
+White,X30790.0.0,Lipoprotein A,Blood biochemistry,3.8,189,44.178953491082375,NA
+White,X30810.0.0,Phosphate,Blood biochemistry,0.369,4.702,1.1593174680196892,NA
+White,X30830.0.0,Sex hormone-binding globulin (SHBG),Blood biochemistry,0.39,241.92,52.13156137231927,FALSE
+White,X30840.0.0,Total bilirubin,Blood biochemistry,1.08,144.52,9.110978744774128,NA
+White,X30850.0.0,Testosterone,Blood biochemistry,0.35,54.342,6.0662042904577165,NA
+White,X30860.0.0,Total protein,Blood biochemistry,36.27,117.36,72.3724009230163,NA
+White,X30870.0.0,Triglycerides,Blood biochemistry,0.231,11.278,1.7515129097262094,FALSE
+White,X30880.0.0,Urate,Blood biochemistry,89.1,927,308.91117260786,FALSE
+White,X30890.0.0,Vitamin D,Blood biochemistry,10,340,49.190475302533635,FALSE
+White,X30000.0.0,White blood cell (leukocyte) count,Blood count,0,389.7,6.895489001570148,NA
+White,X30010.0.0,Red blood cell (erythrocyte) count,Blood count,0.006,7.911,4.510203315738953,NA
+White,X30020.0.0,Haemoglobin concentration,Blood count,0.09,22.27,14.193884233076451,NA
+White,X30030.0.0,Haematocrit percentage,Blood count,0.05,72.48,41.11356895393606,NA
+White,X30040.0.0,Mean corpuscular volume,Blood count,53.52,160.3,91.30368130086816,NA
+White,X30050.0.0,Mean corpuscular haemoglobin,Blood count,0,95.67,31.535130283876256,NA
+White,X30060.0.0,Mean corpuscular haemoglobin concentration,Blood count,16.1,97.3,34.53736461474241,NA
+White,X30070.0.0,Red blood cell (erythrocyte) distribution width,Blood count,2.28,38.96,13.473057692755932,NA
+White,X30080.0.0,Platelet count,Blood count,0.3,1821,253.33391512742324,NA
+White,X30090.0.0,Plateletcrit,Blood count,0,1.445,0.23293306860536817,FALSE
+White,X30100.0.0,Mean platelet (thrombocyte) volume,Blood count,5.73,16.5,9.326808919100465,NA
+White,X30110.0.0,Platelet distribution width,Blood count,13.27,20.2,16.49303226530997,NA
+White,X30120.0.0,Lymphocyte count,Blood count,0,196.41,1.9554343537508665,NA
+White,X30130.0.0,Monocyte count,Blood count,0,113.39,0.4780111711245922,NA
+White,X30140.0.0,Neutrophill count,Blood count,0,76.42,4.248201347230845,NA
+White,X30150.0.0,Eosinophill count,Blood count,0,9.6,0.1739945034337647,NA
+White,X30160.0.0,Basophill count,Blood count,0,3.03,0.0339194288995637,NA
+White,X30170.0.0,Nucleated red blood cell count,Blood count,0,6.9,0.0019513869612295,NA
+White,X30180.0.0,Lymphocyte percentage,Blood count,0,98.7,28.691496172109904,NA
+White,X30190.0.0,Monocyte percentage,Blood count,0,96.9,7.086017828877527,NA
+White,X30200.0.0,Neutrophill percentage,Blood count,0,97.7,61.098659189584914,NA
+White,X30210.0.0,Eosinophill percentage,Blood count,0,100,2.555891899451402,NA
+White,X30220.0.0,Basophill percentage,Blood count,0,33.8,0.5680151547577929,NA
+White,X30230.0.0,Nucleated red blood cell percentage,Blood count,0,81.97,0.03043957697205735,NA
+White,X30240.0.0,Reticulocyte percentage,Blood count,0,90.909,1.3499452970879215,NA
+White,X30250.0.0,Reticulocyte count,Blood count,0,2.433,0.0608536480968616,NA
+White,X30260.0.0,Mean reticulocyte volume,Blood count,46,249.45,105.81587329503674,NA
+White,X30270.0.0,Mean sphered cell volume,Blood count,43.31,205.2,82.8703938287589,NA
+White,X30280.0.0,Immature reticulocyte fraction,Blood count,0,1,0.2889145468299392,FALSE
+White,X30290.0.0,High light scatter reticulocyte percentage,Blood count,0,80,0.3996378029839109,NA
+White,X30300.0.0,High light scatter reticulocyte count,Blood count,0,0.6,0.01793093693781506,NA
+White,X30510.0.0,Creatinine (enzymatic) in urine,Urine biochemistry,88,88160,8801.522510706014,FALSE
+White,X30520.0.0,Potassium in urine,Urine biochemistry,2.4,200,63.4161800347932,FALSE
+White,X30530.0.0,Sodium in urine,Urine biochemistry,10,380.7,76.4102165358919,NA
+White,X1807.0.0,Father's age at death,Family history,1,120,70.07137060290593,NA
+White,X1873.0.0,Number of full brothers,Family history,0,23,1.0909751637421572,NA
+White,X1883.0.0,Number of full sisters,Family history,0,20,1.0160468373554608,NA
+White,X87.0.0,Non-cancer illness year/age first occurred,Medical condition,0,2010,835.5856279837518,FALSE
+White,X92.0.0,Operation year/age first occurred,Operation,0,2010,1216.618319203443,FALSE
+White,X134.0.0,Number of self-reported cancers,Medical condition,0,6,0.0920621870570062,NA
+White,X135.0.0,Number of self-reported non-cancer illnesses,Medical condition,0,29,1.8677793999546544,NA
+White,X136.0.0,"Number of operations, self-reported",Operation,0,32,1.7626686952118,NA
+White,X137.0.0,Number of treatments/medications taken,Medication history,0,48,2.460639373128699,FALSE
+White,X2050.0.0,Frequency of depressed mood in last 2 weeks,Mental health,1,4,1.302414971680182,NA
+White,X2060.0.0,Frequency of unenthusiasm / disinterest in last 2 weeks,Mental health,1,4,1.276540426460648,NA
+White,X2070.0.0,Frequency of tenseness / restlessness in last 2 weeks,Mental health,1,4,1.3293320421841328,NA
+White,X2080.0.0,Frequency of tiredness / lethargy in last 2 weeks,Mental health,1,4,1.713530155891433,FALSE
+White,X2217.0.0,Age started wearing glasses or contact lenses,Other health,1,70,31.53673312412196,NA
+White,X2296.0.0,Falls in the last year,Other health,1,3,1.2638542498797494,FALSE
+White,X20008.0.0,Interpolated Year when non-cancer illness first diagnosed,Medical condition,1938.5,2010.7,1995.009025260049,NA
+White,X20009.0.0,Interpolated Age of participant when non-cancer illness first diagnosed,Medical condition,0,70.3,43.293185656377744,NA
+White,X20010.0.0,Interpolated Year when operation took place,Operation,1938.5,2010.53,1984.9783266621607,NA
+White,X20011.0.0,Interpolated Age of participant when operation took place,Operation,0,70.1,33.26265958371033,NA
+White,X20127.0.0,Neuroticism score,Mental health,0,12,4.202156671208291,NA
+White,X6138.0.0,Education,Socio-demographics,1,6,2.630581589257752,NA
+White,X864.0.0,Number of days/week walked 10+ minutes,Physical activity,0,7,5.372679480686795,NA
+White,X874.0.0,Duration of walks,Physical activity,0,1440,61.34237420300849,NA
+White,X884.0.0,Number of days/week of moderate physical activity 10+ minutes,Physical activity,0,7,3.584138359209291,NA
+White,X894.0.0,Duration of moderate activity,Physical activity,0,1440,60.42548592908709,NA
+White,X904.0.0,Number of days/week of vigorous physical activity 10+ minutes,Physical activity,0,7,1.8008501242766422,NA
+White,X924.0.0,Usual walking pace,Physical activity,1,3,2.3166119623419523,NA
+White,X943.0.0,Frequency of stair climbing in last 4 weeks,Physical activity,0,5,2.183062778245125,NA
+White,X1031.0.0,Frequency of friend/family visits,Social Support,1,7,2.758117182384713,NA
+White,X1050.0.0,Time spend outdoors in summer,Sun Exposoure,0,24,3.908895580074206,NA
+White,X1060.0.0,Time spent outdoors in winter,Sun Exposoure,0,24,2.0885871027756178,NA
+White,X1070.0.0,Time spent watching television (TV),Physical activity,0,24,2.893397551760745,FALSE
+White,X1080.0.0,Time spent using computer,Physical activity,0,24,1.2161078632257682,NA
+White,X1100.0.0,Drive faster than motorway speed limit,Physical activity,1,4,1.6842059538364718,FALSE
+White,X1110.0.0,Length of mobile phone use,Electronic device use,0,4,2.6425134182751293,FALSE
+White,X1120.0.0,Weekly usage of mobile phone in last 3 months,Electronic device use,0,5,1.3608726699453946,NA
+White,X1130.0.0,Hands-free device/speakerphone use with mobile phone in last 3 month,Electronic device use,0,4,0.2804901563999822,NA
+White,X1160.0.0,Sleep duration,Sleep,1,23,7.166365422063818,NA
+White,X1170.0.0,Getting up in morning,Sleep,1,4,3.111128533620381,NA
+White,X1180.0.0,Morning/evening person (chronotype),Sleep,1,4,2.1968169075564012,NA
+White,X1190.0.0,Nap during day,Sleep,1,3,1.487488637110086,NA
+White,X1200.0.0,Sleeplessness / insomnia,Sleep,1,3,2.046585199955078,FALSE
+White,X1220.0.0,Daytime dozing / sleeping,Sleep,0,3,0.25995113692467753,NA
+White,X1269.0.0,Exposure to tobacco smoke at home,Smoking,0,168,0.5982781381176485,NA
+White,X1279.0.0,Exposure to tobacco smoke outside home,Smoking,0,168,0.547096927305051,NA
+White,X1289.0.0,Cooked vegetable intake,Diet,0,50,2.7406781923628665,NA
+White,X1299.0.0,Salad / raw vegetable intake,Diet,0,50,2.216171431840672,NA
+White,X1309.0.0,Fresh fruit intake,Diet,0,50,2.2573342289444853,NA
+White,X1319.0.0,Dried fruit intake,Diet,0,100,0.8551737436193003,NA
+White,X1329.0.0,Oily fish intake,Diet,0,5,1.6411043139781027,NA
+White,X1339.0.0,Non-oily fish intake,Diet,0,5,1.7972648543960876,NA
+White,X1349.0.0,Processed meat intake,Diet,0,5,1.888131951492909,NA
+White,X1359.0.0,Poultry intake,Diet,0,5,2.2975562105477283,NA
+White,X1369.0.0,Beef intake,Diet,0,5,1.4600778503637184,NA
+White,X1379.0.0,Lamb/mutton intake,Diet,0,5,1.1009723879126398,NA
+White,X1389.0.0,Pork intake,Diet,0,5,1.139158054885142,NA
+White,X1408.0.0,Cheese intake,Diet,0,5,2.5407993965219493,NA
+White,X1438.0.0,Bread intake,Diet,0,200,12.548796328276802,NA
+White,X1458.0.0,Cereal intake,Diet,0,55,4.733520366324738,NA
+White,X1478.0.0,Salt added to food,Diet,1,4,1.6445476139520396,NA
+White,X1488.0.0,Tea intake,Diet,0,81,3.543903663883067,NA
+White,X1518.0.0,Hot drink temperature,Diet,1,3,1.984762603007643,NA
+White,X1528.0.0,Water intake,Diet,0,80,2.7823601331550587,FALSE
+White,X1548.0.0,Variation in diet,Diet,1,3,1.731066617789465,NA
+White,X1558.0.0,Alcohol intake frequency,Alcohol,1,6,2.8733882707429688,NA
+White,X1727.0.0,Ease of skin tanning,Sun Exposoure,1,4,2.36189612464534,NA
+White,X1737.0.0,Childhood sunburn occasions,Sun Exposoure,0,999,1.680633397678898,NA
+White,X2110.0.0,Able to confide,Social Support,0,5,3.5759316510252557,NA
+White,X2139.0.0,Age first had sexual intercourse,Sexual factors,3,69,19.14224113270796,NA
+White,X2149.0.0,Lifetime number of sexual partners,Sexual factors,1,17000,7.702467097944403,NA
+White,X2277.0.0,Frequency of solarium/sunlamp use,Sun Exposoure,0,900,0.5566406953558889,NA
+White,X22033.0.0,Summed days activity,Physical activity,0,21,10.646602999167252,FALSE
+White,X22034.0.0,Summed minutes activity,Physical activity,0,540,127.35170183776866,NA
+White,X22037.0.0,MET minutes per week for walking,Physical activity,0,4158,1039.509579790266,NA
+White,X22038.0.0,MET minutes per week for moderate activity,Physical activity,0,5040,948.668470602694,NA
+White,X22039.0.0,MET minutes per week for vigorous activity,Physical activity,0,10080,664.0236644763747,FALSE
+White,X6142.0.0,Current employment status,Socio-demographics,0,1,0.5744441454365151,TRUE
+White,X1140.0.0,Difference in mobile phone use compared to two years previously,Electronic device use,0,1,0.5393521510559807,NA
+White,X6144.0.0,"Never eat eggs, dairy, wheat, sugar",Diet,0,1,0.02635554773897031,NA
+White,X6162.0.0,Types of transport used (excluding work),Physical activity,0,1,0.7915563927777578,NA
+White,X1210.0.0,Snoring,Sleep,0,1,0.6279456106930886,NA
+White,X1468.0.0,Cereal type,Diet,0,1,0.25421512890655623,TRUE
+White,X6164,Types of physical activity in last 4 weeks,Physical activity,0,1,0.5401298071116328,NA
+White,X3059,Blow result ranking,Spirometry,0,1,0.7327596618997269,NA
+White,X2247.0.0,Hearing difficulty/problems,Other health,0,1,0.2649497490099188,TRUE
+White,X1150.0.0,Usual side of head for mobile phone use,Electronic device use,0,1,0.576544028682159,TRUE
+White,X1249.0.0,Past tobacco smoking,Smoking,0,1,0.4316796311325172,NA
+White,X1418.0.0,Milk type used,Diet,0,1,0.649033439210393,NA
+White,X1428.0.0,Spread type,Diet,0,1,0.36523135797394113,NA
+White,X1448.0.0,Bread type,Diet,0,1,0.5748149623567852,NA
+White,X1508.0.0,Coffee type,Diet,0,1,0.5617346603634853,NA
+White,X1717.0.0,Skin colour,Sun Exposoure,0,1,0.792757839599433,NA
+White,X1747.0.0,"Hair colour (natural, before greying)",Sun Exposoure,0,1,0.7831886441026337,NA
+White,X1757.0.0,Facial ageing,Sun Exposoure,0,1,0.7349231137602743,TRUE
+White,X1647.0.0,Country of birth (UK/elsewhere),Early life factors,0,1,0.8118602083779196,NA
+White,X1707.0.0,Handedness (chirality/laterality),Early life factors,0,1,0.8880323606628935,NA
+White,APOE4status,APOE4 status,Medical condition,0,1,0.3072843275817863,TRUE
+White,History_of_Diabetes_p2443_i0,History of Diabetes diagnosed by doctor,Medical condition,0,1,0.0487083916928534,NA
+White,Physical_Activity_p22032_i0,IPAQ activity group,Physical activity,0,1,0.8122945939130932,NA
+White,X1797.0.0,Father still alive,Family history,0,1,0.23071593093058096,NA
+White,X1835.0.0,Mother still alive,Family history,0,1,0.3962083440163922,TRUE
+White,X1920.0.0,Mood swings,Mental health,0,1,0.45231188457634697,NA
+White,X1930.0.0,Miserableness,Mental health,0,1,0.4305714182793671,NA
+White,X1940.0.0,Irritability,Mental health,0,1,0.2851412600570846,NA
+White,X1950.0.0,Sensitivity / hurt feelings,Mental health,0,1,0.5553227060735574,NA
+White,X1960.0.0,Fed-up feelings,Mental health,0,1,0.4078710658973452,NA
+White,X1970.0.0,Nervous feelings,Mental health,0,1,0.240316910734832,NA
+White,X1980.0.0,Worrier / anxious feelings,Mental health,0,1,0.566334909128665,NA
+White,X1990.0.0,Tense / 'highly strung',Mental health,0,1,0.1795410769794737,NA
+White,X2000.0.0,Worry too long after embarrassment,Mental health,0,1,0.4774426770015108,TRUE
+White,X2010.0.0,Suffer from 'nerves',Mental health,0,1,0.21872053329829996,NA
+White,X2020.0.0,"Loneliness, isolation",Mental health,0,1,0.18270043714017511,NA
+White,X2030.0.0,Guilty feelings,Mental health,0,1,0.28880705018318353,NA
+White,X2040.0.0,Risk taking,Mental health,0,1,0.2623561495218581,TRUE
+White,X2090.0.0,"Seen doctor (GP) for nerves, anxiety, tension or depression",Mental health,0,1,0.3453682847704431,NA
+White,X2100.0.0,"Seen a psychiatrist for nerves, anxiety, tension or depression",Mental health,0,1,0.11632632736565304,NA
+White,X2188.0.0,"Long-standing illness, disability or infirmity",Other health,0,1,0.3276877340119636,TRUE
+White,X2207.0.0,Wears glasses or contact lenses,Other health,0,1,0.890049604709163,NA
+White,X2227.0.0,Other eye problems,Other health,0,1,0.14462071785917857,NA
+White,X2257.0.0,Hearing difficulty/problems with background noise,Other health,0,1,0.37762935683394394,TRUE
+White,X2316.0.0,Wheeze or whistling in the chest in last year,Other health,0,1,0.2113656445539708,TRUE
+White,X2335.0.0,Chest pain or discomfort,Medication history,0,1,0.16016324420307207,NA
+White,X2453.0.0,Cancer diagnosed by doctor,Medical condition,0,1,0.0794692444446328,NA
+White,X2463.0.0,Fractured/broken bones in last 5 years,Medical condition,0,1,0.0969378998201008,NA
+White,X2473.0.0,Other serious medical condition/disability diagnosed by doctor,Medical condition,0,1,0.20802829227153968,TRUE
+White,X2492.0.0,Taking other prescription medications,Medication history,0,1,0.47135704160142056,TRUE
+White,X3079.0.0,Pace-maker,Operation,0,1,0.00315088434538099,NA
+White,X1239.0.0,Current tobacco smoking,Smoking,0,1,0.10485431132941044,NA
+White,X1259.0.0,Smoking/smokers in household,Smoking,0,1,0.11720145529749051,NA
+White,X1538.0.0,Major dietary changes in the last 5 years,Diet,0,1,0.3876371757735771,TRUE
+White,X2159.0.0,Ever had same-sex intercourse,Sexual factors,0,1,0.03392868872780131,NA
+White,X2237.0.0,Plays computer games,Electronic device use,0,1,0.20969802788967032,NA
+White,X20116.0.0,Smoking status,Smoking,0,1,0.5394305523476949,NA
+White,X20117.0.0,Alcohol drinker status,Alcohol,0,1,0.9324689414342352,TRUE
+White,X20160.0.0,Ever smoked,Smoking,0,1,0.6076884120771893,NA
+White,X22035.0.0,At or above moderate/vigorous recommendation,Physical activity,0,1,0.5402929665565517,NA
+White,X22036.0.0,At or above moderate/vigorous/walking recommendation,Physical activity,0,1,0.8157230612102193,NA
+White,X1677.0.0,Breastfed as a baby,Early life factors,0,1,0.7161661344560963,NA
+White,X1767.0.0,Adopted as a child,Early life factors,0,1,0.01437922069116036,NA
+White,X1777.0.0,Part of a multiple birth,Early life factors,0,1,0.02312414314804494,NA
+White,X1787.0.0,Maternal smoking around birth,Early life factors,0,1,0.30747291447266656,NA
+White,Unnamed: 0_y,Unnamed: 0_y,Other,1,490283,245217.22692936045,NA
+White,AD,AD,Other,0,1,0.00604537527731808,NA
+White,vascular,vascular,Other,0,1,0.00298772490046214,NA
+White,Lewy_body,Lewy_body,Other,0,1,0.00133070300531221,NA
+White,ACD,ACD,Other,0,1,0.01641129741424064,NA
+White,Others,Others,Other,0,1,0.00692262216298569,NA

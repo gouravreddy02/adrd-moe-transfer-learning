@@ -1,0 +1,343 @@
+colname_match_data,ukb_field_id,variable_name,variable_description,category,option_label,option_value,data_type
+X6138.0.0,6138,Education,Education,Socio-demographics,college or university degree,1,ordinal
+X6138.0.0,6138,Education,Education,Socio-demographics,a levels/AS levels or equivalent,2,ordinal
+X6138.0.0,6138,Education,Education,Socio-demographics,o levels/GCSEs or equivalent,3,ordinal
+X6138.0.0,6138,Education,Education,Socio-demographics,CSEs or equivalent,4,ordinal
+X6138.0.0,6138,Education,Education,Socio-demographics,NVQ or HND or HNC or equivalent,5,ordinal
+X6138.0.0,6138,Education,Education,Socio-demographics,"other professional qualifications eg: nursing, teaching",6,ordinal
+X1120.0.0,1120,Mobile_use_wk_3m,Weekly usage of mobile phone in last 3 months,Electronic device use,less than 5 mins,0,ordinal
+X1120.0.0,1120,Mobile_use_wk_3m,Weekly usage of mobile phone in last 3 months,Electronic device use,5-29 mins,1,ordinal
+X1120.0.0,1120,Mobile_use_wk_3m,Weekly usage of mobile phone in last 3 months,Electronic device use,30-59 mins,2,ordinal
+X1120.0.0,1120,Mobile_use_wk_3m,Weekly usage of mobile phone in last 3 months,Electronic device use,1-3 hours,3,ordinal
+X1120.0.0,1120,Mobile_use_wk_3m,Weekly usage of mobile phone in last 3 months,Electronic device use,4-6 hours,4,ordinal
+X1120.0.0,1120,Mobile_use_wk_3m,Weekly usage of mobile phone in last 3 months,Electronic device use,more than 6 hours,5,ordinal
+X1130.0.0,1130,Hands-free_device_use_3m,Hands-free device/speakerphone use with mobile phone in last 3 month,Electronic device use,never or almost never,0,ordinal
+X1130.0.0,1130,Hands-free_device_use_3m,Hands-free device/speakerphone use with mobile phone in last 3 month,Electronic device use,less than half the time,1,ordinal
+X1130.0.0,1130,Hands-free_device_use_3m,Hands-free device/speakerphone use with mobile phone in last 3 month,Electronic device use,about half the time,2,ordinal
+X1130.0.0,1130,Hands-free_device_use_3m,Hands-free device/speakerphone use with mobile phone in last 3 month,Electronic device use,more than half the time,3,ordinal
+X1130.0.0,1130,Hands-free_device_use_3m,Hands-free device/speakerphone use with mobile phone in last 3 month,Electronic device use,always or almost always,4,ordinal
+X1180.0.0,1180,Chronotype,Morning/evening person (chronotype),Sleep,definitely a 'morning' person,1,ordinal
+X1180.0.0,1180,Chronotype,Morning/evening person (chronotype),Sleep,more a 'morning' than 'evening' person,2,ordinal
+X1180.0.0,1180,Chronotype,Morning/evening person (chronotype),Sleep,more an 'evening' than a 'morning' person,3,ordinal
+X1180.0.0,1180,Chronotype,Morning/evening person (chronotype),Sleep,definitely an 'evening' person,4,ordinal
+X1628.0.0,1628,Alc_vs_10yr_prev,Alcohol intake versus 10 years previously,Alcohol,less nowadays,1,ordinal
+X1628.0.0,1628,Alc_vs_10yr_prev,Alcohol intake versus 10 years previously,Alcohol,about the same,2,ordinal
+X1628.0.0,1628,Alc_vs_10yr_prev,Alcohol intake versus 10 years previously,Alcohol,more nowadays,3,ordinal
+X2050.0.0,2050,Freq_depress_2wks,Frequency of depressed mood in last 2 weeks,Mental health,not at all,1,ordinal
+X2050.0.0,2050,Freq_depress_2wks,Frequency of depressed mood in last 2 weeks,Mental health,several days,2,ordinal
+X2050.0.0,2050,Freq_depress_2wks,Frequency of depressed mood in last 2 weeks,Mental health,more than half the days,3,ordinal
+X2050.0.0,2050,Freq_depress_2wks,Frequency of depressed mood in last 2 weeks,Mental health,nearly every day,4,ordinal
+X2070.0.0,2070,Freq_tenseness_2wks,Frequency of tenseness / restlessness in last 2 weeks,Mental health,not at all,1,ordinal
+X2070.0.0,2070,Freq_tenseness_2wks,Frequency of tenseness / restlessness in last 2 weeks,Mental health,several days,2,ordinal
+X2070.0.0,2070,Freq_tenseness_2wks,Frequency of tenseness / restlessness in last 2 weeks,Mental health,more than half the days,3,ordinal
+X2070.0.0,2070,Freq_tenseness_2wks,Frequency of tenseness / restlessness in last 2 weeks,Mental health,nearly every day,4,ordinal
+X2060.0.0,2060,Freq_disinterest_2wks,Frequency of unenthusiasm / disinterest in last 2 weeks,Mental health,not at all,1,ordinal
+X2060.0.0,2060,Freq_disinterest_2wks,Frequency of unenthusiasm / disinterest in last 2 weeks,Mental health,several days,2,ordinal
+X2060.0.0,2060,Freq_disinterest_2wks,Frequency of unenthusiasm / disinterest in last 2 weeks,Mental health,more than half the days,3,ordinal
+X2060.0.0,2060,Freq_disinterest_2wks,Frequency of unenthusiasm / disinterest in last 2 weeks,Mental health,nearly every day,4,ordinal
+X2110.0.0,2110,Able_confide,Able to confide,Social Support,never or almost never,0,ordinal
+X2110.0.0,2110,Able_confide,Able to confide,Social Support,once every few months,1,ordinal
+X2110.0.0,2110,Able_confide,Able to confide,Social Support,about once a month,2,ordinal
+X2110.0.0,2110,Able_confide,Able to confide,Social Support,about once a week,3,ordinal
+X2110.0.0,2110,Able_confide,Able to confide,Social Support,2-4 times a week,4,ordinal
+X2110.0.0,2110,Able_confide,Able to confide,Social Support,almost daily,5,ordinal
+X1727.0.0,1727,Ease_skin_tan,Ease of skin tanning,Sun Exposoure,get very tanned,1,ordinal
+X1727.0.0,1727,Ease_skin_tan,Ease of skin tanning,Sun Exposoure,moderately tanned,2,ordinal
+X1727.0.0,1727,Ease_skin_tan,Ease of skin tanning,Sun Exposoure,get mildly or occasionally tanned,3,ordinal
+X1727.0.0,1727,Ease_skin_tan,Ease of skin tanning,Sun Exposoure,"never tan, only burn",4,ordinal
+X2080.0.0,2080,Freq_tiredness_2wks,Frequency of tiredness / lethargy in last 2 weeks,Mental health,not at all,1,ordinal
+X2080.0.0,2080,Freq_tiredness_2wks,Frequency of tiredness / lethargy in last 2 weeks,Mental health,several days,2,ordinal
+X2080.0.0,2080,Freq_tiredness_2wks,Frequency of tiredness / lethargy in last 2 weeks,Mental health,more than half the days,3,ordinal
+X2080.0.0,2080,Freq_tiredness_2wks,Frequency of tiredness / lethargy in last 2 weeks,Mental health,nearly every day,4,ordinal
+X1100.0.0,1100,Drive_over_speed_limit,Drive faster than motorway speed limit,Physical activity,never/rarely,1,ordinal
+X1100.0.0,1100,Drive_over_speed_limit,Drive faster than motorway speed limit,Physical activity,sometimes,2,ordinal
+X1100.0.0,1100,Drive_over_speed_limit,Drive faster than motorway speed limit,Physical activity,often,3,ordinal
+X1100.0.0,1100,Drive_over_speed_limit,Drive faster than motorway speed limit,Physical activity,most of the time,4,ordinal
+X1408.0.0,1408,Cheese_intake,Cheese intake,Diet,never,0,ordinal
+X1408.0.0,1408,Cheese_intake,Cheese intake,Diet,less than once a week,1,ordinal
+X1408.0.0,1408,Cheese_intake,Cheese intake,Diet,once a week,2,ordinal
+X1408.0.0,1408,Cheese_intake,Cheese intake,Diet,2-4 times a week,3,ordinal
+X1408.0.0,1408,Cheese_intake,Cheese intake,Diet,5-6 times a week,4,ordinal
+X1408.0.0,1408,Cheese_intake,Cheese intake,Diet,once or more daily,5,ordinal
+X1687.0.0,1687,Comp_body_size_age10,Comparative body size at age 10,Early life factors,thinner,1,ordinal
+X1687.0.0,1687,Comp_body_size_age10,Comparative body size at age 10,Early life factors,about average,2,ordinal
+X1687.0.0,1687,Comp_body_size_age10,Comparative body size at age 10,Early life factors,plumper,3,ordinal
+X1697.0.0,1697,Comp_height_age10,Comparative height size at age 10,Early life factors,shorter,1,ordinal
+X1697.0.0,1697,Comp_height_age10,Comparative height size at age 10,Early life factors,about average,2,ordinal
+X1697.0.0,1697,Comp_height_age10,Comparative height size at age 10,Early life factors,taller,3,ordinal
+X2306.0.0,2306,Weight_change_comp_1yr_ago,Weight change compared with 1 year ago,Other health,lost weight,1,ordinal
+X2306.0.0,2306,Weight_change_comp_1yr_ago,Weight change compared with 1 year ago,Other health,about the same,2,ordinal
+X2306.0.0,2306,Weight_change_comp_1yr_ago,Weight change compared with 1 year ago,Other health,gained weight,3,ordinal
+X943.0.0,943,Freq_stair_climb_4wks,Frequency of stair climbing in last 4 weeks,Physical activity,none,0,ordinal
+X943.0.0,943,Freq_stair_climb_4wks,Frequency of stair climbing in last 4 weeks,Physical activity,1-5 times a day,1,ordinal
+X943.0.0,943,Freq_stair_climb_4wks,Frequency of stair climbing in last 4 weeks,Physical activity,6-10 times a day,2,ordinal
+X943.0.0,943,Freq_stair_climb_4wks,Frequency of stair climbing in last 4 weeks,Physical activity,11-15 times a day,3,ordinal
+X943.0.0,943,Freq_stair_climb_4wks,Frequency of stair climbing in last 4 weeks,Physical activity,16-20 times a day,4,ordinal
+X943.0.0,943,Freq_stair_climb_4wks,Frequency of stair climbing in last 4 weeks,Physical activity,more than 20 times a day,5,ordinal
+X1110.0.0,1110,Mobile_use_length,Length of mobile phone use,Electronic device use,never used mobile phone at least once per week,0,ordinal
+X1110.0.0,1110,Mobile_use_length,Length of mobile phone use,Electronic device use,one year or less,1,ordinal
+X1110.0.0,1110,Mobile_use_length,Length of mobile phone use,Electronic device use,two to four years,2,ordinal
+X1110.0.0,1110,Mobile_use_length,Length of mobile phone use,Electronic device use,five to eight years,3,ordinal
+X1110.0.0,1110,Mobile_use_length,Length of mobile phone use,Electronic device use,more than eight years,4,ordinal
+X1031.0.0,1031,Freq_friend_visit,Frequency of friend/family visits,Social Support,almost daily,1,ordinal
+X1031.0.0,1031,Freq_friend_visit,Frequency of friend/family visits,Social Support,2-4 times a week,2,ordinal
+X1031.0.0,1031,Freq_friend_visit,Frequency of friend/family visits,Social Support,about once a week,3,ordinal
+X1031.0.0,1031,Freq_friend_visit,Frequency of friend/family visits,Social Support,about once a month,4,ordinal
+X1031.0.0,1031,Freq_friend_visit,Frequency of friend/family visits,Social Support,once every few months,5,ordinal
+X1031.0.0,1031,Freq_friend_visit,Frequency of friend/family visits,Social Support,never almost never,6,ordinal
+X1031.0.0,1031,Freq_friend_visit,Frequency of friend/family visits,Social Support,no friends/family outside household,7,ordinal
+X1548.0.0,1548,Variation_in_diet,Variation in diet,Diet,never/rarely,1,ordinal
+X1548.0.0,1548,Variation_in_diet,Variation in diet,Diet,sometimes,2,ordinal
+X1548.0.0,1548,Variation_in_diet,Variation in diet,Diet,often,3,ordinal
+X3077.0.0,3077,Seating_box_height,Seating box height,Body size measures,30 cm,30,ordinal
+X3077.0.0,3077,Seating_box_height,Seating box height,Body size measures,40 cm,40,ordinal
+X3077.0.0,3077,Seating_box_height,Seating box height,Body size measures,50 cm,50,ordinal
+X1518.0.0,1518,Hot_drink_temp,Hot drink temperature,Diet,very hot,1,ordinal
+X1518.0.0,1518,Hot_drink_temp,Hot drink temperature,Diet,hot,2,ordinal
+X1518.0.0,1518,Hot_drink_temp,Hot drink temperature,Diet,warn,3,ordinal
+X2267.0.0,2267,Sun_prot_use,Use of sun/uv protection,Sun Exposoure,never/rarely,1,ordinal
+X2267.0.0,2267,Sun_prot_use,Use of sun/uv protection,Sun Exposoure,sometimes,2,ordinal
+X2267.0.0,2267,Sun_prot_use,Use of sun/uv protection,Sun Exposoure,most of the time,3,ordinal
+X2267.0.0,2267,Sun_prot_use,Use of sun/uv protection,Sun Exposoure,always,4,ordinal
+X1170.0.0,1170,Get_up_morning,Getting up in morning,Sleep,not at all,1,ordinal
+X1170.0.0,1170,Get_up_morning,Getting up in morning,Sleep,not very easy,2,ordinal
+X1170.0.0,1170,Get_up_morning,Getting up in morning,Sleep,fairly easy,3,ordinal
+X1170.0.0,1170,Get_up_morning,Getting up in morning,Sleep,very easy,4,ordinal
+X924.0.0,924,Walk_pace,Usual walking pace,Physical activity,slow pace,1,ordinal
+X924.0.0,924,Walk_pace,Usual walking pace,Physical activity,steady average pace,2,ordinal
+X924.0.0,924,Walk_pace,Usual walking pace,Physical activity,brisk pace,3,ordinal
+X1379.0.0,1379,Lamb_intake,Lamb/mutton intake,Diet,never,0,ordinal
+X1379.0.0,1379,Lamb_intake,Lamb/mutton intake,Diet,less than once a week,1,ordinal
+X1379.0.0,1379,Lamb_intake,Lamb/mutton intake,Diet,once a week,2,ordinal
+X1379.0.0,1379,Lamb_intake,Lamb/mutton intake,Diet,2-4 times a week,3,ordinal
+X1379.0.0,1379,Lamb_intake,Lamb/mutton intake,Diet,5-6 times a week,4,ordinal
+X1379.0.0,1379,Lamb_intake,Lamb/mutton intake,Diet,once or more daily,5,ordinal
+X1389.0.0,1389,Pork_intake,Pork intake,Diet,never,0,ordinal
+X1389.0.0,1389,Pork_intake,Pork intake,Diet,less than once a week,1,ordinal
+X1389.0.0,1389,Pork_intake,Pork intake,Diet,once a week,2,ordinal
+X1389.0.0,1389,Pork_intake,Pork intake,Diet,2-4 times a week,3,ordinal
+X1389.0.0,1389,Pork_intake,Pork intake,Diet,5-6 times a week,4,ordinal
+X1389.0.0,1389,Pork_intake,Pork intake,Diet,once or more daily,5,ordinal
+X1329.0.0,1329,Oily_fish_intake,Oily fish intake,Diet,never,0,ordinal
+X1329.0.0,1329,Oily_fish_intake,Oily fish intake,Diet,less than once a week,1,ordinal
+X1329.0.0,1329,Oily_fish_intake,Oily fish intake,Diet,once a week,2,ordinal
+X1329.0.0,1329,Oily_fish_intake,Oily fish intake,Diet,2-4 times a week,3,ordinal
+X1329.0.0,1329,Oily_fish_intake,Oily fish intake,Diet,5-6 times a week,4,ordinal
+X1329.0.0,1329,Oily_fish_intake,Oily fish intake,Diet,once or more daily,5,ordinal
+X1339.0.0,1339,Non-oily_fish_intake,Non-oily fish intake,Diet,never,0,ordinal
+X1339.0.0,1339,Non-oily_fish_intake,Non-oily fish intake,Diet,less than once a week,1,ordinal
+X1339.0.0,1339,Non-oily_fish_intake,Non-oily fish intake,Diet,once a week,2,ordinal
+X1339.0.0,1339,Non-oily_fish_intake,Non-oily fish intake,Diet,2-4 times a week,3,ordinal
+X1339.0.0,1339,Non-oily_fish_intake,Non-oily fish intake,Diet,5-6 times a week,4,ordinal
+X1339.0.0,1339,Non-oily_fish_intake,Non-oily fish intake,Diet,once or more daily,5,ordinal
+X1220.0.0,1220,Daytime_dozing,Daytime dozing / sleeping,Sleep,never/rarely,0,ordinal
+X1220.0.0,1220,Daytime_dozing,Daytime dozing / sleeping,Sleep,sometimes,1,ordinal
+X1220.0.0,1220,Daytime_dozing,Daytime dozing / sleeping,Sleep,often,2,ordinal
+X1220.0.0,1220,Daytime_dozing,Daytime dozing / sleeping,Sleep,all of the time,3,ordinal
+X1369.0.0,1369,Beef_intake,Beef intake,Diet,never,0,ordinal
+X1369.0.0,1369,Beef_intake,Beef intake,Diet,less than once a week,1,ordinal
+X1369.0.0,1369,Beef_intake,Beef intake,Diet,once a week,2,ordinal
+X1369.0.0,1369,Beef_intake,Beef intake,Diet,2-4 times a week,3,ordinal
+X1369.0.0,1369,Beef_intake,Beef intake,Diet,5-6 times a week,4,ordinal
+X1369.0.0,1369,Beef_intake,Beef intake,Diet,once or more daily,5,ordinal
+X2296.0.0,2296,Falls_last_yr,Falls in the last year,Other health,no falls,1,ordinal
+X2296.0.0,2296,Falls_last_yr,Falls in the last year,Other health,only one falls,2,ordinal
+X2296.0.0,2296,Falls_last_yr,Falls in the last year,Other health,more than one fall,3,ordinal
+X1349.0.0,1349,Processed_meat_intake,Processed meat intake,Diet,never,0,ordinal
+X1349.0.0,1349,Processed_meat_intake,Processed meat intake,Diet,less than once a week,1,ordinal
+X1349.0.0,1349,Processed_meat_intake,Processed meat intake,Diet,once a week,2,ordinal
+X1349.0.0,1349,Processed_meat_intake,Processed meat intake,Diet,2-4 times a week,3,ordinal
+X1349.0.0,1349,Processed_meat_intake,Processed meat intake,Diet,5-6 times a week,4,ordinal
+X1349.0.0,1349,Processed_meat_intake,Processed meat intake,Diet,once or more daily,5,ordinal
+X1359.0.0,1359,Poultry_intake,Poultry intake,Diet,never,0,ordinal
+X1359.0.0,1359,Poultry_intake,Poultry intake,Diet,less than once a week,1,ordinal
+X1359.0.0,1359,Poultry_intake,Poultry intake,Diet,once a week,2,ordinal
+X1359.0.0,1359,Poultry_intake,Poultry intake,Diet,2-4 times a week,3,ordinal
+X1359.0.0,1359,Poultry_intake,Poultry intake,Diet,5-6 times a week,4,ordinal
+X1359.0.0,1359,Poultry_intake,Poultry intake,Diet,once or more daily,5,ordinal
+X1190.0.0,1190,Nap_day,Nap during day,Sleep,never/rarely,1,ordinal
+X1190.0.0,1190,Nap_day,Nap during day,Sleep,sometimes,2,ordinal
+X1190.0.0,1190,Nap_day,Nap during day,Sleep,usually,3,ordinal
+X1200.0.0,1200,Sleeplessness,Sleeplessness / insomnia,Sleep,never/rarely,1,ordinal
+X1200.0.0,1200,Sleeplessness,Sleeplessness / insomnia,Sleep,sometimes,2,ordinal
+X1200.0.0,1200,Sleeplessness,Sleeplessness / insomnia,Sleep,usually,3,ordinal
+X1558.0.0,1558,Alc_intake_freq,Alcohol intake frequency,Alcohol,daily or almost daily,1,ordinal
+X1558.0.0,1558,Alc_intake_freq,Alcohol intake frequency,Alcohol,three or four times a week,2,ordinal
+X1558.0.0,1558,Alc_intake_freq,Alcohol intake frequency,Alcohol,once or twice a week,3,ordinal
+X1558.0.0,1558,Alc_intake_freq,Alcohol intake frequency,Alcohol,one to three times a month,4,ordinal
+X1558.0.0,1558,Alc_intake_freq,Alcohol intake frequency,Alcohol,special occasions only,5,ordinal
+X1558.0.0,1558,Alc_intake_freq,Alcohol intake frequency,Alcohol,never,6,ordinal
+X1478.0.0,1478,Salt_add_food,Salt added to food,Diet,never/rarely,1,ordinal
+X1478.0.0,1478,Salt_add_food,Salt added to food,Diet,sometimes,2,ordinal
+X1478.0.0,1478,Salt_add_food,Salt added to food,Diet,usually,3,ordinal
+X1478.0.0,1478,Salt_add_food,Salt added to food,Diet,always,4,ordinal
+X1677.0.0,1677,Breastfed_baby,Breastfed as a baby,Early life factors,yes,1,binary
+X1677.0.0,1677,Breastfed_baby,Breastfed as a baby,Early life factors,no,0,binary
+X1508.0.0,1508,Coffee_type,Coffee type,Diet,instant coffee,1,binary
+X1508.0.0,1508,Coffee_type,Coffee type,Diet,others,0,binary
+X22036.0.0,22036,Above_act_walking_recom,At or above moderate/vigorous/walking recommendation,Physical activity,yes,1,binary
+X22036.0.0,22036,Above_act_walking_recom,At or above moderate/vigorous/walking recommendation,Physical activity,no,0,binary
+X22035.0.0,22035,Above_act_recom,At or above moderate/vigorous recommendation,Physical activity,yes,1,binary
+X22035.0.0,22035,Above_act_recom,At or above moderate/vigorous recommendation,Physical activity,no,0,binary
+X1140.0.0,1140,Mobile_use_diff_2yr_prev,Difference in mobile phone use compared to two years previously,Electronic device use,no,1,binary
+X1140.0.0,1140,Mobile_use_diff_2yr_prev,Difference in mobile phone use compared to two years previously,Electronic device use,yes,0,binary
+X1468.0.0,1468,Cereal_type,Cereal type,Diet,"oat cereal (e.g., Ready brek, porridge)",1,binary
+X1468.0.0,1468,Cereal_type,Cereal type,Diet,others,0,binary
+X1150.0.0,1150,Mobile_use_head_side,Usual side of head for mobile phone use,Electronic device use,right,1,binary
+X1150.0.0,1150,Mobile_use_head_side,Usual side of head for mobile phone use,Electronic device use,left,0,binary
+X1787.0.0,1787,Maternal_smk_around_birth,Maternal smoking around birth,Early life factors,yes,1,binary
+X1787.0.0,1787,Maternal_smk_around_birth,Maternal smoking around birth,Early life factors,no,0,binary
+X2159.0.0,2159,Ever_same_sex,Ever had same-sex intercourse,Sexual factors,yes,1,binary
+X2159.0.0,2159,Ever_same_sex,Ever had same-sex intercourse,Sexual factors,no,0,binary
+X3059,3059,Blow_result_rank,Blow result ranking,Spirometry,two bests and one worst,1,binary
+X3059,3059,Blow_result_rank,Blow result ranking,Spirometry,others,0,binary
+X1757.0.0,1757,Facial_aging,Facial ageing,Sun Exposoure,younger than you are,1,binary
+X1757.0.0,1757,Facial_aging,Facial ageing,Sun Exposoure,others,0,binary
+X1259.0.0,1259,Smk_household,Smoking/smokers in household,Smoking,equal or more than one household member smokes,1,binary
+X1259.0.0,1259,Smk_household,Smoking/smokers in household,Smoking,no,0,binary
+X1249.0.0,1249,Past_tobacco_smk,Past tobacco smoking,Smoking,never smoked,1,binary
+X1249.0.0,1249,Past_tobacco_smk,Past tobacco smoking,Smoking,smoked,0,binary
+X6164,6164,Phys_act_type_4wks,Types of physical activity in last 4 weeks,Physical activity,leisure physical activities,1,binary
+X6164,6164,Phys_act_type_4wks,Types of physical activity in last 4 weeks,Physical activity,others,0,binary
+X1210.0.0,1210,Snoring,Snoring,Sleep,yes,1,binary
+X1210.0.0,1210,Snoring,Snoring,Sleep,no,0,binary
+X2247.0.0,2247,Hearing_problem,Hearing difficulty/problems,Other health,yes,1,binary
+X2247.0.0,2247,Hearing_problem,Hearing difficulty/problems,Other health,no,0,binary
+X1940.0.0,1940,Irritability,Irritability,Mental health,yes,1,binary
+X1940.0.0,1940,Irritability,Irritability,Mental health,no,0,binary
+X1448.0.0,1448,Bread_type,Bread type,Diet,wholemeal or wholegrain,1,binary
+X1448.0.0,1448,Bread_type,Bread type,Diet,others,0,binary
+X2000.0.0,2000,Worry_embarrass,Worry too long after embarrassment,Mental health,yes,1,binary
+X2000.0.0,2000,Worry_embarrass,Worry too long after embarrassment,Mental health,no,0,binary
+X2010.0.0,2010,Suffer_nerves,Suffer from 'nerves',Mental health,yes,1,binary
+X2010.0.0,2010,Suffer_nerves,Suffer from 'nerves',Mental health,no,0,binary
+X2040.0.0,2040,Risk_take,Risk taking,Mental health,yes,1,binary
+X2040.0.0,2040,Risk_take,Risk taking,Mental health,no,0,binary
+X1990.0.0,1990,Tense,Tense / 'highly strung',Mental health,yes,1,binary
+X1990.0.0,1990,Tense,Tense / 'highly strung',Mental health,no,0,binary
+X1950.0.0,1950,Hurt_feel,Sensitivity / hurt feelings,Mental health,yes,1,binary
+X1950.0.0,1950,Hurt_feel,Sensitivity / hurt feelings,Mental health,no,0,binary
+X2030.0.0,2030,Guilty_feel,Guilty feelings,Mental health,yes,1,binary
+X2030.0.0,2030,Guilty_feel,Guilty feelings,Mental health,no,0,binary
+X1970.0.0,1970,Nervous_feel,Nervous feelings,Mental health,yes,1,binary
+X1970.0.0,1970,Nervous_feel,Nervous feelings,Mental health,no,0,binary
+X1980.0.0,1980,Worrier_feel,Worrier / anxious feelings,Mental health,yes,1,binary
+X1980.0.0,1980,Worrier_feel,Worrier / anxious feelings,Mental health,no,0,binary
+X1797.0.0,1797,Father_alive,Father still alive,Family history,yes,1,binary
+X1797.0.0,1797,Father_alive,Father still alive,Family history,no,0,binary
+X1920.0.0,1920,Mood_swings,Mood swings,Mental health,yes,1,binary
+X1920.0.0,1920,Mood_swings,Mood swings,Mental health,no,0,binary
+X2188.0.0,2188,Long-standing_illness_disability,"Long-standing illness, disability or infirmity",Other health,yes,1,binary
+X2188.0.0,2188,Long-standing_illness_disability,"Long-standing illness, disability or infirmity",Other health,no,0,binary
+X1960.0.0,1960,Fed-up_feel,Fed-up feelings,Mental health,yes,1,binary
+X1960.0.0,1960,Fed-up_feel,Fed-up feelings,Mental health,no,0,binary
+X2257.0.0,2257,Hearing_problem_bk_noise,Hearing difficulty/problems with background noise,Other health,yes,1,binary
+X2257.0.0,2257,Hearing_problem_bk_noise,Hearing difficulty/problems with background noise,Other health,no,0,binary
+X2316.0.0,2316,Wheezing_chest_last_yr,Wheeze or whistling in the chest in last year,Other health,yes,1,binary
+X2316.0.0,2316,Wheezing_chest_last_yr,Wheeze or whistling in the chest in last year,Other health,no,0,binary
+X2473.0.0,2473,Other_med_disab_Dx,Other serious medical condition/disability diagnosed by doctor,Medical condition,yes,1,binary
+X2473.0.0,2473,Other_med_disab_Dx,Other serious medical condition/disability diagnosed by doctor,Medical condition,no,0,binary
+X1930.0.0,1930,Miserableness,Miserableness,Mental health,yes,1,binary
+X1930.0.0,1930,Miserableness,Miserableness,Mental health,no,0,binary
+X2020.0.0,2020,Loneliness,"Loneliness, isolation",Mental health,yes,1,binary
+X2020.0.0,2020,Loneliness,"Loneliness, isolation",Mental health,no,0,binary
+X1835.0.0,1835,Mother_alive,Mother still alive,Family history,yes,1,binary
+X1835.0.0,1835,Mother_alive,Mother still alive,Family history,no,0,binary
+X1777.0.0,1777,Part_multiple_birth,Part of a multiple birth,Early life factors,yes,1,binary
+X1777.0.0,1777,Part_multiple_birth,Part of a multiple birth,Early life factors,no,0,binary
+X6162.0.0,6162,Type_transport,Types of transport used (excluding work),Physical activity,car/motor vehicle,1,binary
+X6162.0.0,6162,Type_transport,Types of transport used (excluding work),Physical activity,others,0,binary
+X1717.0.0,1717,Skin_color,Skin colour,Sun Exposoure,fair,1,binary
+X1717.0.0,1717,Skin_color,Skin colour,Sun Exposoure,others,0,binary
+X2335.0.0,2335,Chest_pain,Chest pain or discomfort,Medication history,yes,1,binary
+X2335.0.0,2335,Chest_pain,Chest pain or discomfort,Medication history,no,0,binary
+X6144.0.0,6144,Never_egg_dairy_wheat_sugar,"Never eat eggs, dairy, wheat, sugar",Diet,I eat all the above,1,binary
+X6144.0.0,6144,Never_egg_dairy_wheat_sugar,"Never eat eggs, dairy, wheat, sugar",Diet,others,0,binary
+X1428.0.0,1428,Spread_type,Spread type,Diet,butter/spreadable butter,1,binary
+X1428.0.0,1428,Spread_type,Spread type,Diet,others,0,binary
+X6142.0.0,6142,Curr_employ_status,Current employment status,Socio-demographics,in paid employment or self-employed,1,binary
+X6142.0.0,6142,Curr_employ_status,Current employment status,Socio-demographics,others,0,binary
+X2090.0.0,2090,Seen_doctor_mental,"Seen doctor (GP) for nerves, anxiety, tension or depression",Mental health,yes,1,binary
+X2090.0.0,2090,Seen_doctor_mental,"Seen doctor (GP) for nerves, anxiety, tension or depression",Mental health,no,0,binary
+X2463.0.0,2463,Fractured_5yrs,Fractured/broken bones in last 5 years,Medical condition,yes,1,binary
+X2463.0.0,2463,Fractured_5yrs,Fractured/broken bones in last 5 years,Medical condition,no,0,binary
+X2100.0.0,2100,Seen_psychiatrist_mental,"Seen a psychiatrist for nerves, anxiety, tension or depression",Mental health,yes,1,binary
+X2100.0.0,2100,Seen_psychiatrist_mental,"Seen a psychiatrist for nerves, anxiety, tension or depression",Mental health,no,0,binary
+X20116.0.0,20116,Smk_status,Smoking status,Smoking,never,1,binary
+X20116.0.0,20116,Smk_status,Smoking status,Smoking,smoker (current or past),0,binary
+X2492.0.0,2492,Take_other_Rx,Taking other prescription medications,Medication history,yes,1,binary
+X2492.0.0,2492,Take_other_Rx,Taking other prescription medications,Medication history,no,0,binary
+X20160.0.0,20160,Ever_smoked,Ever smoked,Smoking,yes,1,binary
+X20160.0.0,20160,Ever_smoked,Ever smoked,Smoking,no,0,binary
+X2453.0.0,2453,Cancer_Dx,Cancer diagnosed by doctor,Medical condition,yes,1,binary
+X2453.0.0,2453,Cancer_Dx,Cancer diagnosed by doctor,Medical condition,no,0,binary
+X2227.0.0,2227,Other_eye_problem,Other eye problems,Other health,yes,1,binary
+X2227.0.0,2227,Other_eye_problem,Other eye problems,Other health,no,0,binary
+X3079.0.0,3079,Pace-maker,Pace-maker,Operation,yes,1,binary
+X3079.0.0,3079,Pace-maker,Pace-maker,Operation,no,0,binary
+X1538.0.0,1538,Major_diet_change_5yrs,Major dietary changes in the last 5 years,Diet,yes,1,binary
+X1538.0.0,1538,Major_diet_change_5yrs,Major dietary changes in the last 5 years,Diet,no,0,binary
+X1767.0.0,1767,Adopted_child,Adopted as a child,Early life factors,yes,1,binary
+X1767.0.0,1767,Adopted_child,Adopted as a child,Early life factors,no,0,binary
+X1747.0.0,1747,Hair_color,"Hair colour (natural, before greying)",Sun Exposoure,brown,1,binary
+X1747.0.0,1747,Hair_color,"Hair colour (natural, before greying)",Sun Exposoure,others,0,binary
+X2237.0.0,2237,Play_computer_game,Plays computer games,Electronic device use,usually,1,binary
+X2237.0.0,2237,Play_computer_game,Plays computer games,Electronic device use,never/rarely,0,binary
+X20117.0.0,20117,Alc_drinker_status,Alcohol drinker status,Alcohol,current,1,binary
+X20117.0.0,20117,Alc_drinker_status,Alcohol drinker status,Alcohol,others,0,binary
+X2207.0.0,2207,Wear_glass,Wears glasses or contact lenses,Other health,yes,1,binary
+X2207.0.0,2207,Wear_glass,Wears glasses or contact lenses,Other health,no,0,binary
+X1647.0.0,1647,Country_birth,Country of birth (UK/elsewhere),Early life factors,England,1,binary
+X1647.0.0,1647,Country_birth,Country of birth (UK/elsewhere),Early life factors,others,0,binary
+X1418.0.0,1418,Milk_type,Milk type used,Diet,semi-skimmed,1,binary
+X1418.0.0,1418,Milk_type,Milk type used,Diet,others,0,binary
+X1239.0.0,1239,Curr_tobacco_smk,Current tobacco smoking,Smoking,current smokers,1,binary
+X1239.0.0,1239,Curr_tobacco_smk,Current tobacco smoking,Smoking,non-current smokers,0,binary
+X1707.0.0,1707,Handedness,Handedness (chirality/laterality),Early life factors,right-handed,1,binary
+X1707.0.0,1707,Handedness,Handedness (chirality/laterality),Early life factors,others,0,binary
+APOE4status,263,APOE4_status,APOE4 status,Medical condition,carriers,1,binary
+APOE4status,263,APOE4_status,APOE4 status,Medical condition,non-carriers,0,binary
+History_of_Diabetes_p2443_i0,2443,Diabetes_Dx,History of Diabetes diagnosed by doctor,Medical condition,yes,1,binary
+History_of_Diabetes_p2443_i0,2443,Diabetes_Dx,History of Diabetes diagnosed by doctor,Medical condition,no,0,binary
+Physical_Activity_p22032_i0,22032,IPAQ_act_grp,IPAQ activity group,Physical activity,moderate to high,1,binary
+Physical_Activity_p22032_i0,22032,IPAQ_act_grp,IPAQ activity group,Physical activity,low,0,binary
+AF_ICD10,41270,AF_ICD10,History of Atrial Fibrillation determined by ICD10 codes,Medical condition,yes,1,binary
+AF_ICD10,41270,AF_ICD10,History of Atrial Fibrillation determined by ICD10 codes,Medical condition,no,0,binary
+AF_p20002_i0,20002,AF_self-report,History of Atrial Fibrillation determined by self report non-cancer codes,Medical condition,yes,1,binary
+AF_p20002_i0,20002,AF_self-report,History of Atrial Fibrillation determined by self report non-cancer codes,Medical condition,no,0,binary
+Depression_ICD,"41270, 41271",Depression_ICD,Depression determined by ICD codes,Medical condition,yes,1,binary
+Depression_ICD,"41270, 41271",Depression_ICD,Depression determined by ICD codes,Medical condition,no,0,binary
+Depression_p20002_i0,20002,Depression_self-report,Depression determined by self-reported non-cancer illness codes,Medical condition,yes,1,binary
+Depression_p20002_i0,20002,Depression_self-report,Depression determined by self-reported non-cancer illness codes,Medical condition,no,0,binary
+Hchol_ICD10,41270,Hchol_ICD10,High cholesterol determined by ICD codes,Medical condition,yes,1,binary
+Hchol_ICD10,41270,Hchol_ICD10,High cholesterol determined by ICD codes,Medical condition,no,0,binary
+Hchol_med,42040,Hchol_med,High cholesterol determined by self reported use of statins,Medical condition,yes,1,binary
+Hchol_med,42040,Hchol_med,High cholesterol determined by self reported use of statins,Medical condition,no,0,binary
+Hchol_p20002_i0,20002,Hchol_self-report,High cholesterol determined by self-reported non-cancer illness codes,Medical condition,yes,1,binary
+Hchol_p20002_i0,20002,Hchol_self-report,High cholesterol determined by self-reported non-cancer illness codes,Medical condition,no,0,binary
+History_of_Diabetes_ICD,"41270, 41271",History_of_Diabetes_ICD,History of Diabetes determined by ICD codes,Medical condition,yes,1,binary
+History_of_Diabetes_ICD,"41270, 41271",History_of_Diabetes_ICD,History of Diabetes determined by ICD codes,Medical condition,no,0,binary
+Hypertension_status_ICD10,41270,Hypertension_status_ICD10,Hypertension status determined by ICD codes,Medical condition,yes,1,binary
+Hypertension_status_ICD10,41270,Hypertension_status_ICD10,Hypertension status determined by ICD codes,Medical condition,no,0,binary
+Hypertension_status_med,42040,Hypertension_status_med,Hypertension status determined by self reported use of antihypertensive medication,Medical condition,yes,1,binary
+Hypertension_status_med,42040,Hypertension_status_med,Hypertension status determined by self reported use of antihypertensive medication,Medical condition,no,0,binary
+Hypertension_status_p20002_i0,20002,Hypertension_status_self-report,Hypertension status determined by self-reported non-cancer illness codes,Medical condition,yes,1,binary
+Hypertension_status_p20002_i0,20002,Hypertension_status_self-report,Hypertension status determined by self-reported non-cancer illness codes,Medical condition,no,0,binary
+Medications_ATC_Antihypertensive,20003,Medications_ATC_Antihypertensive,Self-reported anti-hypertensive medications based on the ATC codes reported in Supplementary Data 1 of Wu et al. (2019),Medication history,yes,1,binary
+Medications_ATC_Antihypertensive,20003,Medications_ATC_Antihypertensive,Self-reported anti-hypertensive medications based on the ATC codes reported in Supplementary Data 1 of Wu et al. (2019),Medication history,no,0,binary
+Medications_ATC_Aspirin,20003,Medications_ATC_Aspirin,Self-reported aspirin-use medications based on the ATC codes reported in Supplementary Data 1 of Wu et al. (2019),Medication history,yes,1,binary
+Medications_ATC_Aspirin,20003,Medications_ATC_Aspirin,Self-reported aspirin-use medications based on the ATC codes reported in Supplementary Data 1 of Wu et al. (2019),Medication history,no,0,binary
+Medications_ATC_Hormone_replacement_therapy,20003,Medications_ATC_HRT,Self-reported horone replacement therapy medications based on the ATC codes reported in Supplementary Data 1 of Wu et al. (2019),Medication history,yes,1,binary
+Medications_ATC_Hormone_replacement_therapy,20003,Medications_ATC_HRT,Self-reported horone replacement therapy medications based on the ATC codes reported in Supplementary Data 1 of Wu et al. (2019),Medication history,no,0,binary
+Medications_ATC_NSAIDs_excluding_Aspirin,20003,Medications_ATC_NSAIDs,Self-reported NSAIDs excluding aspirin medications based on the ATC codes reported in Supplementary Data 1 of Wu et al. (2019),Medication history,yes,1,binary
+Medications_ATC_NSAIDs_excluding_Aspirin,20003,Medications_ATC_NSAIDs,Self-reported NSAIDs excluding aspirin medications based on the ATC codes reported in Supplementary Data 1 of Wu et al. (2019),Medication history,no,0,binary
+Medications_ATC_Statins,20003,Medications_ATC_Statins,Self-reported statin-usemedications based on the ATC codes reported in Supplementary Data 1 of Wu et al. (2019),Medication history,yes,1,binary
+Medications_ATC_Statins,20003,Medications_ATC_Statins,Self-reported statin-usemedications based on the ATC codes reported in Supplementary Data 1 of Wu et al. (2019),Medication history,no,0,binary
+StrokeTIA_ICD,"41270, 41271",StrokeTIA_ICD,History of stroke and/or a transient ischemic stroke (TIA) determined by ICD codes,Medical condition,yes,1,binary
+StrokeTIA_ICD,"41270, 41271",StrokeTIA_ICD,History of stroke and/or a transient ischemic stroke (TIA) determined by ICD codes,Medical condition,no,0,binary
+StrokeTIA_p20002_i0,20002,StrokeTIA_self-report,History of stroke and/or atransient ischemic stroke (TIA) determined by self-reported non-cancer illness codes,Medical condition,yes,1,binary
+StrokeTIA_p20002_i0,20002,StrokeTIA_self-report,History of stroke and/or atransient ischemic stroke (TIA) determined by self-reported non-cancer illness codes,Medical condition,no,0,binary
+TBI_ICD10,41270,TBI_ICD10,History of traumatic brain injury (TBI) determined by ICD codes,Medical condition,yes,1,binary
+TBI_ICD10,41270,TBI_ICD10,History of traumatic brain injury (TBI) determined by ICD codes,Medical condition,no,0,binary
+31-0.0,31,Sex,Sex,Socio-demographics,male,1,binary
+31-0.0,31,Sex,Sex,Socio-demographics,female,0,binary
