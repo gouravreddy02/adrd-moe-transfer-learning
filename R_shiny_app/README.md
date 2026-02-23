@@ -2,6 +2,8 @@
 
 An interactive R Shiny web application for estimating an individual's probability of developing dementia over 5, 10, or 15 years. The PS-DRS provides **population-specific scores** for three racial groups using Cox Proportional Hazards models developed on UK Biobank data and externally validated in the All of Us cohort.
 
+**Access the calculator online at** https://gouravvelma.shinyapps.io/psdrs-dementia-calculator
+
 ## Background
 
 Unlike most existing dementia risk tools built predominantly on White European populations, the PS-DRS was developed using a **mixture-of-experts deep transfer learning** framework that borrows information from the larger White population to improve predictions for smaller minority groups.
@@ -63,6 +65,9 @@ runApp("app.R")
 cd path/to/R_shiny_app
 R -e "shiny::runApp('app.R')"
 ```
+
+### Option 4: Use the Web Version (No Installation)
+Visit https://gouravvelma.shinyapps.io/psdrs-dementia-calculator/ in your browser. No installation or R setup required.
 
 ## How It Works
 
