@@ -213,7 +213,7 @@ calculate_sullivan_score <- function(user_data, model) {
   }
 
   # 5. Calibrate to 0-100 scale
-  # PS-DRS = 100*(raw - P5)/(P95 - P5), clipped [0,100]
+  # PS-ADRS = 100*(raw - P5)/(P95 - P5), clipped [0,100]
   calibrated_score <- 100 * (raw_score - P5) / (P95 - P5)
   calibrated_score <- max(0, min(100, calibrated_score))
 
@@ -380,7 +380,7 @@ ui <- dashboardPage(
             style = "flex: 1;",
             box(
               width = NULL,
-              title = "Top Risk Factor Contributions",
+              title = "Top Individualised Risk Factor Contributions",
               status = "warning",
               solidHeader = TRUE,
               collapsible = TRUE,
@@ -447,11 +447,11 @@ ui <- dashboardPage(
             width = 12,
             
             div(class = "info-box-good",
-                h5("Model Specifications:"),
+                h5(strong("Model Specifications:")),
                 uiOutput("model_specs_display"),
                 
                 br(),
-                h5("Key Features:"),
+                h5(strong("Key Features:")),
                 tags$ol(
                   tags$li(strong("Top Features:"), 
                           "Uses race-specific top features based on importance"),
@@ -678,8 +678,8 @@ server <- function(input, output, session) {
       if (!is.null(input[[id]])) values[[f]] <- as.numeric(input[[id]])
     }
 
-    # Range validation (disabled — can enhance later)
-    warn_df <- data.frame()
+    # Range validation
+    warn_df <- check_ranges(values, stats_df, input$race)
 
     # Calculate Completeness Metrics
     n_total <- length(feats)
@@ -903,7 +903,7 @@ server <- function(input, output, session) {
         `Time (Years)` = time_years,
         `Dementia Risk (%)` = risk_percent,
         `Risk Category` = risk_category,
-        `Sullivan Risk Score` = sullivan,
+        `Population-Specific Dementia Risk Score (PS-ADRS)` = sullivan,
         `Hazard Ratio` = hr,
         `Linear Predictor` = lp
       )
@@ -914,7 +914,7 @@ server <- function(input, output, session) {
       tagList(
         table_out,
         p(style = "font-size: 11px; color: #888; margin-top: 6px;",
-          em("Note: Sullivan Risk Score is unavailable for this race/age group ",
+          em("Note: Population-Specific Dementia Risk Score (PS-ADRS) is unavailable for this race/age group ",
              "(model instability due to insufficient events). ",
              "Risk is based on Cox probability only."))
       )
@@ -998,21 +998,33 @@ server <- function(input, output, session) {
       arrange(desc(abs(contribution))) %>%
       head(15)
 
-    # Create colored list items
-    list_items <- lapply(1:nrow(contrib_df), function(i) {
-      color <- if (contrib_df$contribution[i] > 0) "#dc3545" else "#28a745"  # Red for increase, Green for decrease
-      direction <- if (contrib_df$contribution[i] > 0) "↑" else "↓"
-
-      tags$div(
-        style = paste0("padding: 8px; margin: 4px 0; border-left: 4px solid ", color, "; background-color: #f8f9fa;"),
-        tags$span(
-          style = paste0("color: ", color, "; font-weight: bold; font-size: 16px;"),
-          paste0(i, ". ", direction, " ", contrib_df$feature_description[i])
-        )
+    # Create aligned table rows
+    rows <- lapply(1:nrow(contrib_df), function(i) {
+      val <- contrib_df$contribution[i]
+      color <- if (val > 0) "#dc3545" else "#28a745"
+      direction <- if (val > 0) "\u2191" else "\u2193"
+      tags$tr(
+        style = paste0("border-left: 4px solid ", color, "; background-color: ", if (val > 0) "#fff5f5" else "#f5fff7", "; margin-bottom: 2px;"),
+        tags$td(style = "padding: 5px 8px; color: #555;", i),
+        tags$td(style = "padding: 5px 8px;", contrib_df$feature_description[i]),
+        tags$td(style = paste0("padding: 5px 8px; color: ", color, "; font-weight: bold; text-align: center;"), direction),
+        tags$td(style = paste0("padding: 5px 8px; color: ", color, "; text-align: right; font-family: monospace;"),
+                sprintf("%.3f", val))
       )
     })
 
-    do.call(tagList, list_items)
+    tags$table(
+      style = "width: 100%; border-collapse: collapse; font-size: 13px;",
+      tags$thead(
+        tags$tr(style = "border-bottom: 2px solid #dee2e6; color: #555;",
+          tags$th(style = "padding: 5px 8px; text-align: left;", "#"),
+          tags$th(style = "padding: 5px 8px; text-align: left;", "Feature"),
+          tags$th(style = "padding: 5px 8px; text-align: center;", "Direction"),
+          tags$th(style = "padding: 5px 8px; text-align: right;", "Contribution")
+        )
+      ),
+      tags$tbody(rows)
+    )
   })
 
   # ----------------------------------------------------------------------------
@@ -1048,7 +1060,21 @@ server <- function(input, output, session) {
     if (is.null(st)) return(NULL)
 
     if (nrow(st$range_warnings) > 0) {
-      div(p(paste(nrow(st$range_warnings), "feature(s) outside training range")))
+      warn_df <- st$range_warnings
+      desc_map <- stats_df %>% select(feature, feature_description) %>% distinct()
+      warn_items <- lapply(seq_len(nrow(warn_df)), function(i) {
+        r <- warn_df[i, ]
+        desc_row <- desc_map %>% filter(feature == !!r$feature)
+        label <- if (nrow(desc_row) > 0) desc_row$feature_description[1] else r$feature
+        color <- if (r$severity == "High") "#dc3545" else "#e6a800"
+        tags$li(style = paste0("margin-bottom: 4px; color: ", color, ";"),
+                strong(label), paste0(" = ", round(r$value, 2),
+                " (expected: ", round(r$min_value, 2), " \u2013 ", round(r$max_value, 2), ")"))
+      })
+      div(style = "background-color: #fff8e1; border-left: 3px solid #ffc107; border-radius: 3px; padding: 8px; max-height: 200px; overflow-y: auto;",
+        p(strong(paste(nrow(warn_df), "feature(s) outside training range:"))),
+        tags$ul(style = "padding-left: 18px; margin: 4px 0;", warn_items)
+      )
     } else {
       div(class = "info-box-good",
           p("All feature values within training data ranges"))
@@ -1137,18 +1163,30 @@ server <- function(input, output, session) {
     for (race in c("White", "Black", "Asian")) {
       model_ref <- model_params$models[[race]][["leq65"]][["10"]]
       n_features <- if (!is.null(model_ref)) length(unlist(model_ref$features)) else 0
-
-      age_strata <- model_params$metadata$age_strata
-      age_labels <- sapply(age_strata, function(s) model_params$metadata$age_strata_labels[[s]])
-      age_str <- paste(age_labels, collapse = ", ")
-
-      specs <- tagList(
-        specs,
-        p(strong(paste0(race, ":")),
-          paste0(n_features, " top features | Age Groups: ", age_str))
+      specs <- tagList(specs,
+        p(strong(paste0(race, ":")), paste0(n_features, " top features"))
       )
     }
-    specs
+
+    # Add risk thresholds
+    thresholds <- model_params$metadata$clinical_thresholds
+    thresh_text <- tagList()
+    for (age_stratum in names(thresholds)) {
+      t <- thresholds[[age_stratum]]
+      age_label <- model_params$metadata$age_strata_labels[[age_stratum]]
+      thresh_text <- tagList(
+        thresh_text,
+        p(style = "margin-top: 12px; margin-bottom: 4px;",
+          strong(paste0("Risk Thresholds (Age", age_label, "):"))),
+        tags$ul(style = "padding-left: 18px; margin: 4px 0;",
+          tags$li(paste0("Low: < ", round(t$Low_upper, 1), "%")),
+          tags$li(paste0("Medium: ", round(t$Low_upper, 1), "% – ", round(t$Medium_upper, 1), "%")),
+          tags$li(paste0("High: ≥ ", round(t$Medium_upper, 1), "%"))
+        )
+      )
+    }
+
+    tagList(specs, thresh_text)
   })
 
   # Feature info table
