@@ -141,6 +141,8 @@ black_adaptive_moe_ae_model_history = train_moe_model(
     epochs=50, batch_size=16, verbose=1, callbacks=[early_stopping, lr_scheduler], class_weight=class_weights
 )
 
+black_adaptive_moe_ae_model.save_weights('black_adaptive_moe_ae_model.weights.h5')
+
 # Predict and evaluate
 y_test_probs = black_adaptive_moe_ae_model.predict(list(X_test_blocks_b.values()), verbose=0).ravel()
 black_metrics = evaluate_metrics(Black_y_test, y_test_probs)
@@ -203,6 +205,8 @@ asian_adaptive_moe_ae_model_history = train_moe_model(
     epochs=50, batch_size=16, verbose=1, callbacks=[early_stopping, lr_scheduler], class_weight=class_weights
 )
 
+asian_adaptive_moe_ae_model.save_weights('asian_adaptive_moe_ae_model.weights.h5')
+
 # Predict and evaluate
 y_test_probs = asian_adaptive_moe_ae_model.predict(list(X_test_blocks_a.values()), verbose=0).ravel()
 asian_metrics = evaluate_metrics(Asian_y_test, y_test_probs)
@@ -248,10 +252,10 @@ save_predictions_csv(
 )
 
 #######################
-## Stage 2: White Base Model
+##White Base Model
 ## Train White MoE with White-only encoders (no transfer), evaluate on White test set
 #######################
-
+    
 white_adaptive_moe_ae_model = build_moe_model_adaptive_gates(X_train_blocks_w, pretrained_encoders_w_base, loss_fn=focal, seed=42, learning_rate=1e-4)
 
 early_stopping = EarlyStopping(monitor='val_auc', patience=10, mode='max', restore_best_weights=True)
@@ -261,6 +265,8 @@ white_adaptive_moe_ae_model_history = train_moe_model(
     white_adaptive_moe_ae_model, X_train_blocks_w, White_y_train, X_val_blocks_w, White_y_val,
     epochs=50, batch_size=256, verbose=1, callbacks=[early_stopping, lr_scheduler], class_weight=None
 )
+
+white_adaptive_moe_ae_model.save_weights('white_adaptive_moe_ae_model.weights.h5')
 
 # Predict and evaluate
 y_test_probs = white_adaptive_moe_ae_model.predict(list(X_test_blocks_w.values()), verbose=0).ravel()
