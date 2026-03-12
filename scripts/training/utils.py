@@ -169,3 +169,48 @@ def bootstrap_auc_ci(y_true: np.ndarray, y_pred: np.ndarray,
     upper_ci = np.percentile(bootstrap_aucs, upper_percentile)
 
     return lower_ci, upper_ci, bootstrap_aucs
+
+def bootstrap_cummulative_auc(model, X_blocks, y, n_boot=400, random_state=42):
+    """
+    Calculate bootstrap confidence interval for AUC using model predictions.
+    
+    This function performs bootstrap resampling on data blocks and computes model
+    predictions on each resampled set. Used for cumulative feature importance analysis
+    where the model must make predictions on progressively masked feature sets.
+
+    Parameters:
+    -----------
+    model : Keras model
+        Trained model that makes predictions on the resampled data blocks.
+    X_blocks : list of arrays
+        List of feature blocks (numpy arrays) to be resampled together.
+    y : array-like
+        True binary labels (will be flattened to 1D).
+    n_boot : int, default=400
+        Number of bootstrap iterations to perform.
+    random_state : int, default=42
+        Random seed for reproducibility.
+
+    Returns:
+    --------
+    mean_auc : float
+        Mean AUC across all bootstrap iterations.
+    ci_tuple : tuple of (float, float)
+        (lower_ci, upper_ci) - 95% confidence interval bounds for AUC.
+    """
+    rng = np.random.default_rng(random_state)
+    y = np.asarray(y).ravel()
+    n = y.shape[0]
+    aucs = []
+
+    for _ in range(n_boot):
+        idx = rng.integers(0, n, n)
+        X_sample = [xb[idx] for xb in X_blocks]   
+        y_sample = y[idx]
+        y_pred = model.predict(X_sample, verbose=0).ravel()
+        aucs.append(roc_auc_score(y_sample, y_pred))
+
+    aucs = np.asarray(aucs, float)
+    mean_auc = float(aucs.mean())
+    ci_low, ci_high = np.percentile(aucs, [2.5, 97.5]).astype(float)
+    return mean_auc, (ci_low, ci_high)
