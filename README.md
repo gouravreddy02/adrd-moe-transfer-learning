@@ -30,7 +30,7 @@ External validation was performed on the **All of Us** cohort.
 
 ## Model Architecture
 
-![Mixture of Experts Architecture](scripts/images/MoE_architecture.jpg)
+![MoE_architecture](https://github.com/user-attachments/assets/95f6f6d5-65cb-46ab-9c31-fdcdfc41fc40)
 
 ### Mixture of Experts with Denoising Autoencoders
 
