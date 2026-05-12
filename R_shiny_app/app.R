@@ -17,8 +17,16 @@ DATA_DIR <- getwd()
 MODEL_PARAMS_FILE <- file.path(DATA_DIR, "shiny_app_params/shiny_model_params.json")
 
 # UI metadata: feature stats for range validation, coded options for dropdowns
-FEATURE_FILE <- file.path(DATA_DIR, "shiny_app_params/feature_summary_race_stratified.csv")
+FEATURE_FILE <- file.path(DATA_DIR, "shiny_app_params/feature_summary_race_stratified_with_units.csv")
 FORMATTED_OPTS_FILE <- file.path(DATA_DIR, "shiny_app_params/formatted_feature_coding.csv")
+
+# Append a units string to a feature description, e.g. "BMI (kg/m^2)"
+desc_with_units <- function(desc, units) {
+  if (is.null(units) || length(units) == 0) return(desc)
+  units <- as.character(units)
+  if (is.na(units) || nzchar(trimws(units)) == FALSE) return(desc)
+  paste0(desc, " (", trimws(units), ")")
+}
 # ------------------------------------------------------------------------------
 # HELPER FUNCTIONS: FILE READING & DATA PROCESSING
 # ------------------------------------------------------------------------------
@@ -556,7 +564,9 @@ server <- function(input, output, session) {
       return(p("No features found matching criteria."))
     
     # Ensure columns exist for display
-    sub <- sub %>% select(feature, feature_description, category, min, max, mean, is_binary)
+    has_units <- "units" %in% names(sub)
+    if (!has_units) sub$units <- NA_character_
+    sub <- sub %>% select(feature, feature_description, category, min, max, mean, is_binary, units)
     ui_blocks <- list()
     for (cat in unique(sub$category)) {
       cat_df <- sub %>% filter(category == !!cat)
@@ -570,6 +580,7 @@ server <- function(input, output, session) {
         mu <- cat_df$mean[i]
         is_bin <- cat_df$is_binary[i]
         desc <- cat_df$feature_description[i]
+        unit <- cat_df$units[i]
         
         # Check binary status
         is_binary_feat <- !is.na(is_bin) && (isTRUE(as.logical(is_bin)) || is_bin == "True")
@@ -591,28 +602,29 @@ server <- function(input, output, session) {
           
           cat_ui[[i]] <- selectInput(
             inputId = paste0("feat__", f),
-            label = desc,
+            label = desc_with_units(desc, unit),
             choices = c("Select..." = "", choices_vec),
             selected = ""
           )
-          
+
         } else {
           # CASE 2: No specific options found. Check if Binary or Continuous.
-          
+
           if (is_binary_feat) {
             # Binary: No range in label, use SelectInput default Yes/No
             cat_ui[[i]] <- selectInput(
               inputId = paste0("feat__", f),
-              label = desc,
+              label = desc_with_units(desc, unit),
               choices = c("Select..." = "", "Yes" = 1, "No" = 0),
               selected = ""
             )
           } else {
-            # Continuous: Use numericInput with min/max hints
+            # Continuous: Use numericInput with min/max hints, plus units if available
+            desc_u <- desc_with_units(desc, unit)
             if (!is.na(lo) && !is.na(hi) && is.finite(lo) && is.finite(hi)) {
-               lab <- paste0(desc, " (", lo, "-", hi, ")")
+               lab <- paste0(desc_u, " (", lo, "-", hi, ")")
             } else {
-               lab <- paste0(desc, " (", f, ")")
+               lab <- paste0(desc_u, " (", f, ")")
             }
             
             cat_ui[[i]] <- numericInput(
@@ -986,15 +998,23 @@ server <- function(input, output, session) {
       coef * std_val
     })
 
-    # Get feature descriptions
-    desc_map <- stats_df %>% select(feature, feature_description) %>% distinct()
+    # Get feature descriptions (with units when available)
+    stats_local <- stats_df
+    if (!"units" %in% names(stats_local)) stats_local$units <- NA_character_
+    desc_map <- stats_local %>%
+      select(feature, feature_description, units) %>%
+      distinct(feature, .keep_all = TRUE)
     contrib_df <- data.frame(
       feature = features,
       contribution = contributions,
       stringsAsFactors = FALSE
     ) %>%
       left_join(desc_map, by = "feature") %>%
-      mutate(feature_description = ifelse(is.na(feature_description), feature, feature_description)) %>%
+      mutate(
+        feature_description = ifelse(is.na(feature_description), feature, feature_description),
+        feature_description = mapply(desc_with_units, feature_description, units,
+                                     USE.NAMES = FALSE)
+      ) %>%
       arrange(desc(abs(contribution))) %>%
       head(15)
 
@@ -1061,11 +1081,15 @@ server <- function(input, output, session) {
 
     if (nrow(st$range_warnings) > 0) {
       warn_df <- st$range_warnings
-      desc_map <- stats_df %>% select(feature, feature_description) %>% distinct()
+      stats_local <- stats_df
+      if (!"units" %in% names(stats_local)) stats_local$units <- NA_character_
+      desc_map <- stats_local %>%
+        select(feature, feature_description, units) %>%
+        distinct(feature, .keep_all = TRUE)
       warn_items <- lapply(seq_len(nrow(warn_df)), function(i) {
         r <- warn_df[i, ]
         desc_row <- desc_map %>% filter(feature == !!r$feature)
-        label <- if (nrow(desc_row) > 0) desc_row$feature_description[1] else r$feature
+        label <- if (nrow(desc_row) > 0) desc_with_units(desc_row$feature_description[1], desc_row$units[1]) else r$feature
         color <- if (r$severity == "High") "#dc3545" else "#e6a800"
         tags$li(style = paste0("margin-bottom: 4px; color: ", color, ";"),
                 strong(label), paste0(" = ", round(r$value, 2),
@@ -1086,7 +1110,11 @@ server <- function(input, output, session) {
     if (is.null(st)) return(NULL)
 
     imp <- st$imputed_flags
-    desc_map <- stats_df %>% select(feature, feature_description) %>% distinct()
+    stats_local <- stats_df
+    if (!"units" %in% names(stats_local)) stats_local$units <- NA_character_
+    desc_map <- stats_local %>%
+      select(feature, feature_description, units) %>%
+      distinct(feature, .keep_all = TRUE)
 
     # Split features into provided and imputed lists
     provided_rows <- list()
@@ -1097,7 +1125,7 @@ server <- function(input, output, session) {
       if (is.na(val_used)) next
 
       desc_row <- desc_map %>% filter(feature == !!f)
-      label <- if (nrow(desc_row) > 0) desc_row$feature_description[1] else f
+      label <- if (nrow(desc_row) > 0) desc_with_units(desc_row$feature_description[1], desc_row$units[1]) else f
 
       if (as.logical(imp[[f]])) {
         imputed_rows[[length(imputed_rows) + 1]] <- tags$tr(
@@ -1223,8 +1251,15 @@ server <- function(input, output, session) {
 
     df <- do.call(rbind, df_rows)
 
-    # Get descriptions
-    desc_map <- stats_df %>% select(feature, feature_description) %>% distinct()
+    # Get descriptions (with units appended when available)
+    stats_local <- stats_df
+    if (!"units" %in% names(stats_local)) stats_local$units <- NA_character_
+    desc_map <- stats_local %>%
+      select(feature, feature_description, units) %>%
+      distinct(feature, .keep_all = TRUE) %>%
+      mutate(feature_description = mapply(desc_with_units, feature_description, units,
+                                          USE.NAMES = FALSE)) %>%
+      select(feature, feature_description)
 
     # Join and format
     joined <- df %>%
